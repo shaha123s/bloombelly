@@ -189,17 +189,6 @@ class _ToolsWidgetState extends State<ToolsWidget> {
                           focusColor: Colors.transparent,
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context.pushNamed(
-                              TrackPregnancyWidget.routeName,
-                              queryParameters: {
-                                'role': serializeParam(
-                                  FFAppState().role,
-                                  ParamType.String,
-                                ),
-                              }.withoutNulls,
-                            );
-                          },
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.5,
                             height: MediaQuery.sizeOf(context).height * 0.5,
@@ -316,10 +305,6 @@ class _ToolsWidgetState extends State<ToolsWidget> {
                           focusColor: Colors.transparent,
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context
-                                .pushNamed(MonitorTestResultsWidget.routeName);
-                          },
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.5,
                             height: MediaQuery.sizeOf(context).height * 0.5,
@@ -433,17 +418,6 @@ class _ToolsWidgetState extends State<ToolsWidget> {
                           focusColor: Colors.transparent,
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context.pushNamed(
-                              FirstAidGuideWidget.routeName,
-                              queryParameters: {
-                                'titlee': serializeParam(
-                                  '',
-                                  ParamType.String,
-                                ),
-                              }.withoutNulls,
-                            );
-                          },
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.5,
                             height: 100.0,
@@ -558,9 +532,6 @@ class _ToolsWidgetState extends State<ToolsWidget> {
                           focusColor: Colors.transparent,
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context.pushNamed(FoodtrackWidget.routeName);
-                          },
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.5,
                             height: MediaQuery.sizeOf(context).height * 0.5,
@@ -672,9 +643,6 @@ class _ToolsWidgetState extends State<ToolsWidget> {
                           focusColor: Colors.transparent,
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context.pushNamed(ChatWidget.routeName);
-                          },
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.5,
                             height: MediaQuery.sizeOf(context).height * 0.5,
@@ -785,9 +753,6 @@ class _ToolsWidgetState extends State<ToolsWidget> {
                           focusColor: Colors.transparent,
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context.pushNamed(TracKicksWidget.routeName);
-                          },
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.5,
                             height: MediaQuery.sizeOf(context).height * 0.5,

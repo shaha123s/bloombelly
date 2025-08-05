@@ -114,11 +114,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: HomeWidget.routePath,
           builder: (context, params) => HomeWidget(),
         ),
-        FFRoute(
-          name: HomeeWidget.routeName,
-          path: HomeeWidget.routePath,
-          builder: (context, params) => HomeeWidget(),
-        )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
 

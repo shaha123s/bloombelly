@@ -67,9 +67,6 @@ class _FatherWidgetState extends State<FatherWidget> {
               color: Color(0xFF333333),
               size: 24.0,
             ),
-            onPressed: () async {
-              context.pushNamed(ToolsWidget.routeName);
-            },
           ),
           title: Text(
             'Track Pregnancy',
@@ -268,10 +265,6 @@ class _FatherWidgetState extends State<FatherWidget> {
                                   focusColor: Colors.transparent,
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
-                                  onTap: () async {
-                                    context
-                                        .pushNamed(TracKicksWidget.routeName);
-                                  },
                                   child: Container(
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.45,

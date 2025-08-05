@@ -176,17 +176,6 @@ class _FirstAidGuideWidgetState extends State<FirstAidGuideWidget> {
                                 focusColor: Colors.transparent,
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  context.pushNamed(
-                                    AidWidget.routeName,
-                                    queryParameters: {
-                                      'titlee': serializeParam(
-                                        listViewCareGuidesRow.title,
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
-                                  );
-                                },
                                 child: Container(
                                   width: MediaQuery.sizeOf(context).width * 0.9,
                                   height:
