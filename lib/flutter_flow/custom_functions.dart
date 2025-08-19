@@ -56,3 +56,14 @@ String? fetalKickStatus(
 
   return "un known condtion";
 }
+
+double? newCustomFunction(
+  double? totalSpent,
+  double? totalIncome,
+) {
+  if (totalSpent == null || totalIncome == null) {
+    return 0;
+  } else {
+    return totalIncome - totalSpent;
+  }
+}

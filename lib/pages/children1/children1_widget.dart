@@ -13,10 +13,16 @@ import 'children1_model.dart';
 export 'children1_model.dart';
 
 class Children1Widget extends StatefulWidget {
-  const Children1Widget({super.key});
+  const Children1Widget({
+    super.key,
+    required this.name,
+    required this.date,
+  });
 
   static String routeName = 'children1';
   static String routePath = '/children1';
+  final String name;
+  final DateTime date;
 
   @override
   State<Children1Widget> createState() => _Children1WidgetState();

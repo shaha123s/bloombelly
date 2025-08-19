@@ -85,14 +85,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
+          appStateNotifier.loggedIn ? ToolsWidget() : LoginWidget(),
       routes: [
-        FFRoute(
-          name: '_initialize',
-          path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : LoginWidget(),
-        ),
         FFRoute(
           name: LoginWidget.routeName,
           path: LoginWidget.routePath,
@@ -104,15 +98,62 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ChoseroleWidget(),
         ),
         FFRoute(
-          name: DateWidget.routeName,
-          path: DateWidget.routePath,
-          builder: (context, params) =>
-              params.isEmpty ? NavBarPage(initialPage: 'date') : DateWidget(),
+          name: ToolsWidget.routeName,
+          path: ToolsWidget.routePath,
+          builder: (context, params) => ToolsWidget(),
         ),
         FFRoute(
-          name: HomeWidget.routeName,
-          path: HomeWidget.routePath,
-          builder: (context, params) => HomeWidget(),
+          name: FirstAidGuideWidget.routeName,
+          path: FirstAidGuideWidget.routePath,
+          builder: (context, params) => FirstAidGuideWidget(
+            titlee: params.getParam(
+              'titlee',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: AidWidget.routeName,
+          path: AidWidget.routePath,
+          builder: (context, params) => AidWidget(
+            titlee: params.getParam(
+              'titlee',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: MonitorTestResultsWidget.routeName,
+          path: MonitorTestResultsWidget.routePath,
+          builder: (context, params) => MonitorTestResultsWidget(),
+        ),
+        FFRoute(
+          name: DateWidget.routeName,
+          path: DateWidget.routePath,
+          builder: (context, params) => DateWidget(),
+        ),
+        FFRoute(
+          name: FatherWidget.routeName,
+          path: FatherWidget.routePath,
+          builder: (context, params) => FatherWidget(),
+        ),
+        FFRoute(
+          name: VaccinceWidget.routeName,
+          path: VaccinceWidget.routePath,
+          builder: (context, params) => VaccinceWidget(),
+        ),
+        FFRoute(
+          name: Children1Widget.routeName,
+          path: Children1Widget.routePath,
+          builder: (context, params) => Children1Widget(
+            name: params.getParam<String>('name', ParamType.String),
+            date: params.getParam<DateTime>('date', ParamType.DateTime),
+          ),
+        ),
+        FFRoute(
+          name: FoodtrackchildWidget.routeName,
+          path: FoodtrackchildWidget.routePath,
+          builder: (context, params) => FoodtrackchildWidget(),
         ),
         FFRoute(
           name: Sleeptrack1Widget.routeName,
@@ -120,9 +161,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => Sleeptrack1Widget(),
         ),
         FFRoute(
-          name: Children1Widget.routeName,
-          path: Children1Widget.routePath,
-          builder: (context, params) => Children1Widget(),
+          name: ChildprofileWidget.routeName,
+          path: ChildprofileWidget.routePath,
+          builder: (context, params) => ChildprofileWidget(),
+        ),
+        FFRoute(
+          name: Children2Widget.routeName,
+          path: Children2Widget.routePath,
+          builder: (context, params) => Children2Widget(
+            heightRowId:
+                params.getParam<String>('heightRowId', ParamType.String),
+            weightRowId:
+                params.getParam<String>('weightRowId', ParamType.String),
+          ),
+        ),
+        FFRoute(
+          name: Sleeptrack2Widget.routeName,
+          path: Sleeptrack2Widget.routePath,
+          builder: (context, params) => Sleeptrack2Widget(),
         ),
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -291,7 +347,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.uri.toString());
-            return '/login';
+            return '/loginCopy';
           }
           return null;
         },

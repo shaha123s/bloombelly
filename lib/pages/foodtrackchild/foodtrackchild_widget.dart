@@ -2,32 +2,35 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
+import '/flutter_flow/flutter_flow_util.dart';
+
+import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'sleeptrack1_model.dart';
-export 'sleeptrack1_model.dart';
+import 'foodtrackchild_model.dart';
+export 'foodtrackchild_model.dart';
 
-class Sleeptrack1Widget extends StatefulWidget {
-  const Sleeptrack1Widget({super.key});
+class FoodtrackchildWidget extends StatefulWidget {
+  const FoodtrackchildWidget({super.key});
 
-  static String routeName = 'sleeptrack1';
-  static String routePath = '/sleeptrack1';
+  static String routeName = 'foodtrackchild';
+  static String routePath = '/foodtrackchild';
 
   @override
-  State<Sleeptrack1Widget> createState() => _Sleeptrack1WidgetState();
+  State<FoodtrackchildWidget> createState() => _FoodtrackchildWidgetState();
 }
 
-class _Sleeptrack1WidgetState extends State<Sleeptrack1Widget> {
-  late Sleeptrack1Model _model;
+class _FoodtrackchildWidgetState extends State<FoodtrackchildWidget> {
+  late FoodtrackchildModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => Sleeptrack1Model());
+    _model = createModel(context, () => FoodtrackchildModel());
 
     _model.textController1 ??= TextEditingController();
     _model.textFieldFocusNode1 ??= FocusNode();
@@ -37,6 +40,8 @@ class _Sleeptrack1WidgetState extends State<Sleeptrack1Widget> {
 
     _model.textController3 ??= TextEditingController();
     _model.textFieldFocusNode3 ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -55,11 +60,12 @@ class _Sleeptrack1WidgetState extends State<Sleeptrack1Widget> {
       },
       child: Scaffold(
         key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Container(
-            width: 500.0,
-            height: 92233720368547760.0,
+            width: MediaQuery.sizeOf(context).width * 1.0,
+            height: MediaQuery.sizeOf(context).height * 3.0,
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,
@@ -98,8 +104,10 @@ class _Sleeptrack1WidgetState extends State<Sleeptrack1Widget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 5.0, 120.0, 0.0),
                               child: Text(
-                                'Sleeptrack',
-                                textAlign: TextAlign.center,
+                                FFLocalizations.of(context).getText(
+                                  'c8lqap0p' /* Foodtrack */,
+                                ),
+                                textAlign: TextAlign.end,
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
                                     .override(
@@ -116,71 +124,77 @@ class _Sleeptrack1WidgetState extends State<Sleeptrack1Widget> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                    child: Container(
-                      width: MediaQuery.sizeOf(context).width * 0.5,
-                      height: MediaQuery.sizeOf(context).height * 0.15,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          fit: BoxFit.contain,
-                          image: Image.asset(
-                            'assets/images/Sleeping_baby-cuate.png',
-                          ).image,
-                        ),
+                  Container(
+                    width: MediaQuery.sizeOf(context).width * 0.5,
+                    height: MediaQuery.sizeOf(context).height * 0.156,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.contain,
+                        image: Image.asset(
+                          'assets/images/Baby_shoes-pana.png',
+                        ).image,
                       ),
                     ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Flexible(
+                          child: Align(
+                            alignment: AlignmentDirectional(-1.0, -1.0),
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  20.0, 0.0, 20.0, 0.0),
+                              child: Text(
+                                FFLocalizations.of(context).getText(
+                                  'cgjc238o' /* الوجبات */,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Amiri',
+                                      fontSize: 16.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Slider(
+                    activeColor: FlutterFlowTheme.of(context).primary,
+                    inactiveColor: FlutterFlowTheme.of(context).alternate,
+                    min: 0.0,
+                    max: 5.0,
+                    value: _model.sliderValue ??= 0.0,
+                    label: _model.sliderValue?.toStringAsFixed(0),
+                    divisions: 5,
+                    onChanged: (newValue) {
+                      newValue = double.parse(newValue.toStringAsFixed(0));
+                      safeSetState(() => _model.sliderValue = newValue);
+                    },
                   ),
                   Align(
                     alignment: AlignmentDirectional(1.0, -1.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(20.0, 15.0, 20.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                       child: Text(
-                        'تتبع نوم طفلك',
+                        FFLocalizations.of(context).getText(
+                          'ugream62' /* تفاصيل الوجبة */,
+                        ),
                         textAlign: TextAlign.end,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              font: GoogleFonts.inter(
-                                fontWeight: FontWeight.bold,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
-                              ),
-                              fontSize: 18.0,
+                              fontFamily: 'Amiri',
+                              color: Color(0xFF5E3E7E),
+                              fontSize: 16.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
-                            ),
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: AlignmentDirectional(1.0, -1.0),
-                    child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 5.0),
-                      child: Text(
-                        'وقت النوم',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              font: GoogleFonts.inter(
-                                fontWeight: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
-                              ),
-                              fontSize: 14.0,
-                              letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
                             ),
                       ),
                     ),
@@ -212,7 +226,9 @@ class _Sleeptrack1WidgetState extends State<Sleeptrack1Widget> {
                                       .labelMedium
                                       .fontStyle,
                                 ),
-                        hintText: 'الوقت',
+                        hintText: FFLocalizations.of(context).getText(
+                          '4nsswhly' /* ما هي الأصناف التي تناولها؟ */,
+                        ),
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   font: GoogleFonts.inter(
@@ -290,26 +306,17 @@ class _Sleeptrack1WidgetState extends State<Sleeptrack1Widget> {
                     alignment: AlignmentDirectional(1.0, -1.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 5.0),
+                          EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 0.0),
                       child: Text(
-                        'وقت الاستيقاظ',
+                        FFLocalizations.of(context).getText(
+                          '1vjvtc48' /* مقدار الوجبة */,
+                        ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              font: GoogleFonts.inter(
-                                fontWeight: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
-                              ),
-                              fontSize: 14.0,
+                              fontFamily: 'Amiri',
+                              color: Color(0xFF5E3E7E),
+                              fontSize: 16.0,
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
+                              fontWeight: FontWeight.bold,
                             ),
                       ),
                     ),
@@ -341,7 +348,9 @@ class _Sleeptrack1WidgetState extends State<Sleeptrack1Widget> {
                                       .labelMedium
                                       .fontStyle,
                                 ),
-                        hintText: 'الوقت',
+                        hintText: FFLocalizations.of(context).getText(
+                          'dqpgp53y' /* كم كانت الكمية؟(حاولي التقدير ... */,
+                        ),
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   font: GoogleFonts.inter(
@@ -419,26 +428,17 @@ class _Sleeptrack1WidgetState extends State<Sleeptrack1Widget> {
                     alignment: AlignmentDirectional(1.0, -1.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 5.0),
+                          EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 0.0),
                       child: Text(
-                        'ملاحظات حول جدول النوم',
+                        FFLocalizations.of(context).getText(
+                          'gl980tnp' /* ميعاد الوجبة */,
+                        ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              font: GoogleFonts.inter(
-                                fontWeight: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
-                              ),
+                              fontFamily: 'Mirza',
+                              color: Color(0xFF5E3E7E),
                               fontSize: 16.0,
                               letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
+                              fontWeight: FontWeight.bold,
                             ),
                       ),
                     ),
@@ -470,7 +470,9 @@ class _Sleeptrack1WidgetState extends State<Sleeptrack1Widget> {
                                       .labelMedium
                                       .fontStyle,
                                 ),
-                        hintText: 'اية ملاحظة؟',
+                        hintText: FFLocalizations.of(context).getText(
+                          '927wj8pz' /* ما هي الأصناف التي تناولها؟ */,
+                        ),
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   font: GoogleFonts.inter(
@@ -546,39 +548,230 @@ class _Sleeptrack1WidgetState extends State<Sleeptrack1Widget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 20.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: () {
                         print('Button pressed ...');
                       },
-                      text: 'حفظ',
+                      text: FFLocalizations.of(context).getText(
+                        'xviigyqe' /* حفظ */,
+                      ),
                       options: FFButtonOptions(
-                        width: 300.0,
-                        height: 50.0,
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        width: 150.0,
+                        height: 40.0,
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            16.0, 0.0, 16.0, 0.0),
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: Color(0xFFAC97D4),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Amiri',
-                                  color: Color(0xFF171616),
+                                  color: Colors.white,
+                                  fontSize: 18.0,
                                   letterSpacing: 0.0,
                                 ),
                         elevation: 0.0,
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(25.0),
-                          bottomRight: Radius.circular(25.0),
-                          topLeft: Radius.circular(25.0),
-                          topRight: Radius.circular(25.0),
-                        ),
-                        hoverColor: Color(0x7587BDA3),
-                        hoverBorderSide: BorderSide(
-                          color: Color(0xFFF9F4F4),
-                        ),
+                        borderRadius: BorderRadius.circular(24.0),
+                        hoverColor: Color(0x68929294),
                       ),
                     ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(1.0, -1.0),
+                    child: Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 10.0, 0.0),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          'mjhoipum' /* ارشيف الوجبات السابقة */,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'gulzar',
+                              color: Color(0xFF5E3E7E),
+                              fontSize: 18.0,
+                              letterSpacing: 0.0,
+                              fontWeight: FontWeight.normal,
+                            ),
+                      ),
+                    ),
+                  ),
+                  ListView(
+                    padding: EdgeInsets.zero,
+                    primary: false,
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      FlipCard(
+                        fill: Fill.fillBack,
+                        direction: FlipDirection.HORIZONTAL,
+                        speed: 400,
+                        front: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              20.0, 0.0, 20.0, 10.0),
+                          child: Container(
+                            width: 100.0,
+                            height: 170.0,
+                            decoration: BoxDecoration(
+                              color: Color(0x30795993),
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(12.0),
+                                bottomRight: Radius.circular(12.0),
+                                topLeft: Radius.circular(12.0),
+                                topRight: Radius.circular(12.0),
+                              ),
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'd0lsjpq3' /* Front */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
+                                          letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
+                                  ),
+                                ),
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'rljo2zzr' /* Hello World */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        font: GoogleFonts.inter(
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
+                                        letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        back: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              20.0, 0.0, 20.0, 10.0),
+                          child: Container(
+                            width: 100.0,
+                            height: 150.0,
+                            decoration: BoxDecoration(
+                              color: Color(0x8B6993BA),
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(12.0),
+                                bottomRight: Radius.circular(12.0),
+                                topLeft: Radius.circular(12.0),
+                                topRight: Radius.circular(12.0),
+                              ),
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      '2as6kdea' /* Back */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.inter(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
+                                          letterSpacing: 0.0,
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
+                                  ),
+                                ),
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'bat6i4yo' /* Hello World */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        font: GoogleFonts.inter(
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
+                                        letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),

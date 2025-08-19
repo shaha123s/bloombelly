@@ -11,11 +11,17 @@ import 'children2_model.dart';
 export 'children2_model.dart';
 
 class Children2Widget extends StatefulWidget {
-  const Children2Widget({super.key});
+  const Children2Widget({
+    super.key,
+    required this.heightRowId,
+    required this.weightRowId,
+  });
 
   static String routeName = 'children2';
   static String routePath = '/children2';
 
+  final String heightRowId; // صف الطول
+  final String weightRowId; // صف الوزن
   @override
   State<Children2Widget> createState() => _Children2WidgetState();
 }
@@ -445,10 +451,7 @@ class _Children2WidgetState extends State<Children2Widget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     15.0, 50.0, 0.0, 15.0),
                                 child: FFButtonWidget(
-                                  onPressed: () async {
-                                    context
-                                        .pushNamed(Children3Widget.routeName);
-                                  },
+                                  onPressed: () async {},
                                   text: 'التالي',
                                   options: FFButtonOptions(
                                     width: 121.8,

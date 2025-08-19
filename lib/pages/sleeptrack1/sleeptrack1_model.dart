@@ -9,6 +9,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class Sleeptrack1Model extends FlutterFlowModel<Sleeptrack1Widget> {
+  ///  Local state fields for this page.
+
+  DateTime? sleepdate;
+
+  DateTime? wake;
+
+  String? note;
+
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for TextField widget.

@@ -89,19 +89,6 @@ class _Sleeptrack2WidgetState extends State<Sleeptrack2Widget> {
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 5.0, 120.0, 0.0),
-                              child: Text(
-                                'Sleeptrack',
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context)
-                                    .titleLarge
-                                    .override(
-                                      fontFamily: 'play',
-                                      color: Color(0xEE637D87),
-                                      fontSize: 25.0,
-                                      letterSpacing: 0.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                              ),
                             ),
                           ),
                         ],
@@ -129,24 +116,6 @@ class _Sleeptrack2WidgetState extends State<Sleeptrack2Widget> {
                     child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(20.0, 15.0, 20.0, 0.0),
-                      child: Text(
-                        'تتبع نوم طفلك',
-                        textAlign: TextAlign.end,
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              font: GoogleFonts.inter(
-                                fontWeight: FontWeight.bold,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
-                              ),
-                              fontSize: 18.0,
-                              letterSpacing: 0.0,
-                              fontWeight: FontWeight.bold,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
-                            ),
-                      ),
                     ),
                   ),
                   Padding(
@@ -167,17 +136,6 @@ class _Sleeptrack2WidgetState extends State<Sleeptrack2Widget> {
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 20.0, 0.0),
-                                child: Text(
-                                  'أنماط النوم الحديثة',
-                                  textAlign: TextAlign.end,
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'gulzar',
-                                        fontSize: 20.0,
-                                        letterSpacing: 0.0,
-                                      ),
-                                ),
                               ),
                             ),
                             Padding(
@@ -204,17 +162,6 @@ class _Sleeptrack2WidgetState extends State<Sleeptrack2Widget> {
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Text(
-                                            'إجمالي النوم',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Amiri',
-                                                  fontSize: 16.0,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
                                           Expanded(
                                             child: Align(
                                               alignment: AlignmentDirectional(
@@ -282,20 +229,6 @@ class _Sleeptrack2WidgetState extends State<Sleeptrack2Widget> {
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Text(
-                                            'اخر نوم مسجل',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Amiri',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryText,
-                                                  fontSize: 16.0,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
                                           Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
