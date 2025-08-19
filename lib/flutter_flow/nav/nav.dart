@@ -180,6 +180,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: Sleeptrack2Widget.routePath,
           builder: (context, params) => Sleeptrack2Widget(),
         ),
+        FFRoute(
+          name: MotherwithchWidget.routeName,
+          path: MotherwithchWidget.routePath,
+          builder: (context, params) => MotherwithchWidget(),
+        ),
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
 
