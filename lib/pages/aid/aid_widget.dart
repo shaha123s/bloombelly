@@ -101,7 +101,9 @@ class _AidWidgetState extends State<AidWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Text(
-                          'First Aid Guide',
+                          FFLocalizations.of(context).getText(
+                            'vh2tna8k' /* First Aid Guide */,
+                          ),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
                               .override(
@@ -111,10 +113,24 @@ class _AidWidgetState extends State<AidWidget> {
                                 fontWeight: FontWeight.normal,
                               ),
                         ),
+                        Container(
+                          width: 152.3,
+                          height: 132.11,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: Image.asset(
+                                'assets/images/Medicine-amico.png',
+                              ).image,
+                            ),
+                          ),
+                        ),
                         Align(
-                          alignment: AlignmentDirectional(1.0, 0.0),
+                          alignment: AlignmentDirectional(-1.0, 0.0),
                           child: Text(
-                            'الاعراض',
+                            FFLocalizations.of(context).getText(
+                              '1qade66l' /* الاعراض */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .titleMedium
                                 .override(
@@ -152,7 +168,7 @@ class _AidWidgetState extends State<AidWidget> {
                                           .bodyMedium
                                           .fontStyle,
                                     ),
-                                    fontSize: 25.0,
+                                    fontSize: 20.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -165,9 +181,11 @@ class _AidWidgetState extends State<AidWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(1.0, -1.0),
+                          alignment: AlignmentDirectional(-1.0, 0.0),
                           child: Text(
-                            'التوقيت',
+                            FFLocalizations.of(context).getText(
+                              'qdp2ciua' /* التوقيت */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .titleMedium
                                 .override(
@@ -180,7 +198,7 @@ class _AidWidgetState extends State<AidWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(1.0, -1.0),
+                          alignment: AlignmentDirectional(-1.0, 0.0),
                           child: Text(
                             valueOrDefault<String>(
                               containerCareGuidesRow?.timing,
@@ -208,9 +226,11 @@ class _AidWidgetState extends State<AidWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(1.0, -1.0),
+                          alignment: AlignmentDirectional(-1.0, 0.0),
                           child: Text(
-                            'علامات التحذير',
+                            FFLocalizations.of(context).getText(
+                              '09j67iuc' /* علامات التحذير */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .titleMedium
                                 .override(
@@ -223,7 +243,7 @@ class _AidWidgetState extends State<AidWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(1.0, -1.0),
+                          alignment: AlignmentDirectional(-1.0, 0.0),
                           child: Text(
                             valueOrDefault<String>(
                               containerCareGuidesRow?.warningSigns,
@@ -251,9 +271,11 @@ class _AidWidgetState extends State<AidWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(1.0, -1.0),
+                          alignment: AlignmentDirectional(-1.0, 0.0),
                           child: Text(
-                            'الاسعافات الأولية',
+                            FFLocalizations.of(context).getText(
+                              '4ly25sos' /* الاسعافات الأولية */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .titleMedium
                                 .override(
@@ -266,7 +288,7 @@ class _AidWidgetState extends State<AidWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(1.0, -1.0),
+                          alignment: AlignmentDirectional(-1.0, 0.0),
                           child: Text(
                             valueOrDefault<String>(
                               containerCareGuidesRow?.firstAid,
