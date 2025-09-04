@@ -23,6 +23,7 @@
  * THE SOFTWARE.
  */
 
+import 'package:emoji_flag_converter/emoji_flag_converter.dart';
 import 'package:flutter/material.dart';
 
 class FlutterFlowLanguageSelector extends StatelessWidget {
@@ -109,7 +110,23 @@ class _LanguagePickerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final flagInfo = languageToCountryInfo[language];
     Widget flagWidget = Container();
-
+    if (flagInfo is String) {
+      final flagEmoji = EmojiConverter.fromAlpha2CountryCode(flagInfo);
+      flagWidget = Padding(
+        padding: const EdgeInsets.only(bottom: 2.0),
+        child: Text(
+          flagEmoji,
+          style: const TextStyle(fontSize: 20.0),
+        ),
+      );
+    } else if (flagInfo is Map) {
+      final flagUrl = flagInfo['flag'] as String;
+      flagWidget = Image.network(
+        flagUrl,
+        width: 24,
+        height: 20,
+      );
+    }
     flagWidget = Transform.scale(
       scale: flagSize / 24.0,
       child: Container(
@@ -304,7 +321,7 @@ final List<Map<String, String>> _defaultLanguagesList = [
   {"isoCode": "ha", "name": "هَوُسَ"},
   {"isoCode": "he", "name": "עברית"},
   {"isoCode": "hz", "name": "Otjiherero"},
-  {"isoCode": "hi", "name": "हिन्दी, हिंदी"},
+  {"isoCode": "hi", "name": "हिन्दी"},
   {"isoCode": "ho", "name": "Hiri Motu"},
   {"isoCode": "hu", "name": "Magyar"},
   {"isoCode": "is", "name": "Íslenska"},
