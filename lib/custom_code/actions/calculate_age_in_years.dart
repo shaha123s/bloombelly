@@ -9,9 +9,20 @@ import 'package:flutter/material.dart';
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-DateTime getStartOfDay(DateTime date) {
-  return DateTime(date.year, date.month, date.day);
-}
+Future<int> calculateAgeInYears(DateTime dateOfBirth) async {
+  // Get current date
+  DateTime currentDate = DateTime.now();
 
-// Set your action name, define your arguments and return parameter,
-// and then add the boilerplate code using the green button on the right!
+  // Calculate age
+  int age = currentDate.year - dateOfBirth.year;
+
+  // Check if birthday hasn't occurred yet this year
+  if (currentDate.month < dateOfBirth.month ||
+      (currentDate.month == dateOfBirth.month &&
+          currentDate.day < dateOfBirth.day)) {
+    age--;
+  }
+
+  // Return age in years
+  return age;
+}

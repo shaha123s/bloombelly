@@ -9,9 +9,20 @@ import 'package:flutter/material.dart';
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-DateTime getStartOfDay(DateTime date) {
-  return DateTime(date.year, date.month, date.day);
-}
+// sum tow number with zero cae
+Future<double?> totalllbalance(
+  double? balance,
+  double? cost,
+) async {
+  // Handle null cases - return 0.0 if both are null
+  if (balance == null && cost == null) {
+    return 0.0;
+  }
 
-// Set your action name, define your arguments and return parameter,
-// and then add the boilerplate code using the green button on the right!
+  // Handle individual null cases by treating null as 0
+  double safeBalance = balance ?? 0.0;
+  double safeCost = cost ?? 0.0;
+
+  // Sum the two numbers
+  return safeBalance - safeCost;
+}

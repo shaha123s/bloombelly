@@ -144,33 +144,6 @@ bool _isSupportedLocale(Locale locale) {
 }
 
 final kTranslationsMap = <Map<String, Map<String, String>>>[
-  // login
-  {
-    '8vnkwbot': {
-      'ar': 'BloomBelly',
-      'en': 'BloomBelly',
-    },
-    'nie8cq0x': {
-      'ar': 'اهلا بك ',
-      'en': 'Hey, you',
-    },
-    'c19azji2': {
-      'ar': 'Email address',
-      'en': 'Email address',
-    },
-    'f0mhl0i1': {
-      'ar': 'Password',
-      'en': 'Password',
-    },
-    'qvsv8rlt': {
-      'ar': 'تسجيل الدخول',
-      'en': 'Log in',
-    },
-    'lrgjt8r3': {
-      'ar': 'Forgot your password?',
-      'en': 'Forgot your password?',
-    },
-  },
   // choserole
   {
     'qnlvu3hs': {
@@ -211,6 +184,26 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'xu5am80f': {
       'ar': 'Tools',
       'en': 'Tools',
+    },
+    '1nbu4oh0': {
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+    },
+    '19tb3esa': {
+      'ar': 'بروفايل الطفل',
+      'en': 'Child profile',
+    },
+    'j9bo7q3j': {
+      'ar': 'الإعدادات',
+      'en': 'Settings',
+    },
+    'jed0o5to': {
+      'ar': 'تواصل معنا',
+      'en': 'Contact us',
+    },
+    'lw963n4h': {
+      'ar': 'تسجيل الخروج',
+      'en': 'Log out',
     },
     'mw0e5a7k': {
       'ar': 'تتبع الحمل',
@@ -276,6 +269,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'انضمام',
       'en': 'joining',
     },
+    'dmomdecu': {
+      'ar': 'Button',
+      'en': '',
+    },
     'v57izq1y': {
       'ar': 'Home',
       'en': 'Home',
@@ -292,32 +289,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'Profile',
       'en': 'Profile',
     },
-    'wmcf7o7g': {
-      'ar': 'الصفحة الرئيسية',
-      'en': 'Home',
-    },
-    '13qttaet': {
-      'ar': 'بروفايل الطفل',
-      'en': 'Child profile',
-    },
-    'pt5kal02': {
-      'ar': 'الإعدادات',
-      'en': 'Settings',
-    },
-    'xyd3igcz': {
-      'ar': 'تواصل معنا',
-      'en': 'Contact us',
-    },
-    'ez6ouobj': {
-      'ar': 'تسجيل الخروج',
-      'en': 'Log out',
-    },
     '55k7r2cx': {
       'ar': 'tools',
       'en': 'tools',
     },
   },
-  // foodtrack
+  // foodtrackpreagnet
   {
     'e0tnl5ku': {
       'ar': 'Nutrition Check',
@@ -331,37 +308,37 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'سجلي نظامك الغذلئي للبقاء بصحة جيدة اثناء الحمل',
       'en': 'Record your diet to stay healthy during pregnancy.',
     },
-    'rpfkg7ge': {
-      'ar': 'الموصى به 2000- 2500 ',
-      'en': 'Recommended 2000-2500',
-    },
     '1v27i0sl': {
       'ar': 'السعرات الحرارية',
       'en': 'calories',
+    },
+    'rpfkg7ge': {
+      'ar': 'الموصى به 2000- 2500 ',
+      'en': 'Recommended 2000-2500',
     },
     'tymm9ze4': {
       'ar': 'Enter calories',
       'en': 'Enter calories',
     },
-    'arnqq2t0': {
-      'ar': 'الموصى به: 70-100 ',
-      'en': 'Recommended: 70-100',
-    },
     '2zt83gvq': {
       'ar': 'البروتين',
       'en': 'Protein',
+    },
+    'arnqq2t0': {
+      'ar': 'الموصى به: 70-100 ',
+      'en': 'Recommended: 70-100',
     },
     'awtlhw1s': {
       'ar': 'Enter protein (g)',
       'en': 'Enter protein (g)',
     },
-    'l8rurqhg': {
-      'ar': 'الموصى به: 27 ',
-      'en': 'Recommended: 27',
-    },
     'ali3v77y': {
       'ar': 'الحديد',
       'en': 'Iron',
+    },
+    'l8rurqhg': {
+      'ar': 'الموصى به: 27 ',
+      'en': 'Recommended: 27',
     },
     'qej74sxj': {
       'ar': 'Enter iron (mg)',
@@ -468,7 +445,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // TracKicks
   {
     'utn6s3mm': {
-      'ar': 'Track Baby\'s Kicks',
+      'ar': 'Baby\'s Kicks',
       'en': 'Track Baby\'s Kicks',
     },
     'iaspws8n': {
@@ -530,7 +507,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'At what stage of your pregnancy',
     },
     'tyewbue0': {
-      'ar': 'اسبوع  الحمل',
+      'ar': '',
       'en': 'Pregnancy week',
     },
     'bhd82zaq': {
@@ -557,7 +534,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'ادخلي تاريخ اخر دورة شهرية',
       'en': 'Enter the date of your last menstrual period.',
     },
-    '6qcw3x64': {
+    '2a7526fs': {
       'ar': 'TextField',
       'en': 'TextField',
     },
@@ -576,27 +553,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // father
   {
-    'gzdd6ttw': {
-      'ar': 'الوزن',
-      'en': 'the weight',
-    },
-    'dacguyk1': {
-      'ar': 'الطول',
-      'en': 'height',
-    },
     'zdpzzwbm': {
       'ar': 'الاسبوع  ',
       'en': 'week',
     },
-    'zyoysm0u': {
+    '6b9cnpwz': {
       'ar': '  من الحمل',
       'en': 'From pregnancy',
     },
-    '42xdx4v6': {
+    'e32tui5v': {
       'ar': 'Week 13 of your pregnancy',
       'en': 'Week 13 of your pregnancy',
     },
-    'qgajrvrk': {
+    'baolrqf9': {
+      'ar': 'الوزن',
+      'en': 'the weight',
+    },
+    'wxhco17o': {
+      'ar': 'الطول',
+      'en': 'height',
+    },
+    'uufcfcrx': {
       'ar': 'كيف ينمو طفلك؟',
       'en': 'How is your child growing?',
     },
@@ -612,123 +589,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'ما هو دورك في هذه المرحلة؟',
       'en': 'What is your role at this stage?',
     },
-    'n3xmx7ae': {
+    '7ouzdhq7': {
       'ar': 'المراجع التعليمية لهذا الاسبوع',
       'en': 'Educational references for this week',
     },
-    'aqlfvwq3': {
-      'ar': 'كيفية التغلب على غثيان الصباح',
-      'en': 'How to overcome morning sickness',
-    },
-    'eqw0nv65': {
+    'v7kkf8ur': {
       'ar': 'Track Pregnancy',
       'en': 'Track Pregnancy',
     },
-    '76vylq6p': {
+    'qlgf4dxd': {
       'ar': 'Home',
       'en': 'Home',
-    },
-  },
-  // chat
-  {
-    'vjco19i2': {
-      'ar': 'مرحبا',
-      'en': 'Welcome',
-    },
-    'yqmyfnbl': {
-      'ar': '11:13 pm',
-      'en': '11:13 pm',
-    },
-    'za9vj04o': {
-      'ar': 'مرحبا كيف يمكنني مساعدتك؟   ',
-      'en': 'Hello, how can I help you?',
-    },
-    'h5gl9fg6': {
-      'ar': '11:13 pm',
-      'en': '11:13 pm',
-    },
-    '5wpb3y1h': {
-      'ar': 'لدي مشكلة',
-      'en': 'I have a problem',
-    },
-    '1pef8lsk': {
-      'ar': '11:13 pm',
-      'en': '11:13 pm',
-    },
-    '0xfgt2m5': {
-      'ar': 'ماهي مشكتلك ؟',
-      'en': 'What is your problem?',
-    },
-    '4kamrtx2': {
-      'ar': '11:13 pm',
-      'en': '11:13 pm',
-    },
-    'dz0t1ktu': {
-      'ar': 'اعاني من الغثيان والصداع',
-      'en': 'I suffer from nausea and headache',
-    },
-    '6v8suhzo': {
-      'ar': '11:13 pm',
-      'en': '11:13 pm',
-    },
-    '1gn9b9sf': {
-      'ar': 'chatbot',
-      'en': 'chatbot',
-    },
-    'yp8nqfoq': {
-      'ar': 'Home',
-      'en': 'Home',
-    },
-  },
-  // homee
-  {
-    'j51kbf86': {
-      'ar': 'الاسبوع 37',
-      'en': 'Week 37',
-    },
-    'xqbupwwk': {
-      'ar': 'اليوم 3537',
-      'en': 'Day 3537',
-    },
-    'sl67nnw2': {
-      'ar': 'رؤيتي اليومية',
-      'en': 'My daily vision',
-    },
-    'bk0sfvpc': {
-      'ar': 'اليوم ',
-      'en': 'today',
-    },
-    '9dnh2ost': {
-      'ar': '35',
-      'en': '35',
-    },
-    '9f6ppjew': {
-      'ar': 'الوزن',
-      'en': 'the weight',
-    },
-    '4wqpwl3i': {
-      'ar': ' 37الاسبوع',
-      'en': '37th week',
-    },
-    'ruah5k7c': {
-      'ar': 'Today',
-      'en': 'Today',
-    },
-    'wagfcn6s': {
-      'ar': 'Insights',
-      'en': 'Insights',
-    },
-    'bb776fuh': {
-      'ar': '2',
-      'en': '2',
-    },
-    '96bs7zas': {
-      'ar': 'Secret Chats',
-      'en': 'Secret Chats',
-    },
-    'neu2r26w': {
-      'ar': 'Bloombelly',
-      'en': 'Bloombelly',
     },
   },
   // vaccince
@@ -741,17 +612,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'اسم الطفل: أحمد',
       'en': 'Child\'s name: Ahmed',
     },
-    'raom23pf': {
-      'ar': 'الاسم',
-      'en': 'the name',
-    },
     'rdg5i9l4': {
       'ar': 'العمر: 3 سنوات',
       'en': 'Age: 3 years',
-    },
-    'rggck95k': {
-      'ar': 'العمر',
-      'en': 'the age',
     },
     'w4dbrqy7': {
       'ar': 'العمر: 3 سنوات',
@@ -916,100 +779,115 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Home',
     },
   },
-  // paidservices
+  // choseservices
   {
-    'vqfw0mmi': {
-      'ar': 'premium',
-      'en': 'premium',
+    'syo66anb': {
+      'ar': 'خدمات مخصصة لطفلك',
+      'en': 'Services tailored to your child',
     },
-    'dhbl0wf0': {
-      'ar': 'رصيدك ',
-      'en': 'Your balance',
+    '8gt4noir': {
+      'ar': 'اختر الخدمة التي ترغب بالحصول عليها',
+      'en': 'Choose the service you want to get',
     },
-    'u1extfmh': {
-      'ar': 'تتبع النوم',
-      'en': 'Sleep tracking',
+    'zhvy9gj5': {
+      'ar': 'تتبع التغذية',
+      'en': 'Nutrition tracking',
     },
-    'lj1rusup': {
-      'ar':
-          'راقبي نمط نوم الطفل وعدد الساعات حسب فئته العمرية مع نصائح لتحسين جودة النوم',
-      'en':
-          'Monitor your child\'s sleep pattern and the number of hours according to their age group, with tips to improve sleep quality.',
-    },
-    'e0ynruo1': {
+    'ajnwtur0': {
       'ar': 'سعر الخدمة',
-      'en': 'Service price',
+      'en': '',
     },
-    'ggxcjr4d': {
+    'tfw64ezo': {
       'ar': '15000',
-      'en': '15,000',
+      'en': '',
     },
-    'v2xnbuq6': {
+    's04p5xlc': {
+      'ar': 'ازالة',
+      'en': '',
+    },
+    's7n2hpze': {
+      'ar': 'اضافة',
+      'en': '',
+    },
+    'l3qkfe8s': {
       'ar': 'الشات بوت',
-      'en': 'Chatbot',
+      'en': 'Nutrition tracking',
     },
-    'u9nyusob': {
-      'ar':
-          'احصل على نصائح مخصصة ودعم على مدار الساعة من مساعد الذكاء الاصطناعي ',
-      'en': 'Get personalized advice and 24/7 support from your AI assistant.',
-    },
-    'xgi8emdz': {
+    'ahd3bxm1': {
       'ar': 'سعر الخدمة',
-      'en': 'Service price',
+      'en': '',
     },
-    'dx4blkkw': {
+    '8zlu8fqx': {
       'ar': '50000',
-      'en': '50,000',
+      'en': '',
     },
-    'ooj5olg1': {
-      'ar': 'تتبع الغذاء',
-      'en': 'Food tracking',
+    'jxqjlsku': {
+      'ar': 'ازالة',
+      'en': '',
     },
-    'lghoweby': {
-      'ar': 'تابع النظام الغذائي المناسب لعمر طفلك\n',
-      'en': 'Follow a diet appropriate for your child\'s age.',
+    '8ew9qjk5': {
+      'ar': 'اضافة',
+      'en': '',
     },
-    'd68ops2w': {
-      'ar': 'بسعر الخدمة',
-      'en': 'At the service price',
-    },
-    'kxy05rbz': {
-      'ar': '40000',
-      'en': '40,000',
-    },
-    'dkqb8hw0': {
-      'ar': 'تتبع اللقاح',
-      'en': 'Vaccine tracking',
-    },
-    'knq6x8j0': {
-      'ar':
-          'تعرفي على مواعيد التطعيمات الضرورية لطفلك وفقًا لعمره، ولا تفوّتي أي جرعة.',
-      'en':
-          'Find out the necessary vaccination dates for your child according to his age, and do not miss any dose.',
-    },
-    '7fh85mvy': {
-      'ar': 'سعر الخدمة',
-      'en': 'Service price',
-    },
-    'm8pwldp5': {
-      'ar': '20000',
-      'en': '20,000',
-    },
-    'w7orw0dy': {
+    'hegcuo18': {
       'ar': 'تتبع النمو',
-      'en': 'Track growth',
+      'en': 'Nutrition tracking',
     },
-    'mdgcapt4': {
-      'ar': 'تابع وزن وطول طفلك بشكل دوري',
-      'en': 'Monitor your child\'s weight and height regularly.',
-    },
-    'bsuyon7g': {
+    'fsr40g4b': {
       'ar': 'سعر الخدمة',
-      'en': 'Service price',
+      'en': '',
     },
-    'zew4323o': {
+    'da27vr7n': {
       'ar': '30000',
-      'en': '30,000',
+      'en': '',
+    },
+    'vp6eqpj9': {
+      'ar': 'ازالة',
+      'en': '',
+    },
+    '8uai44f8': {
+      'ar': 'اضافة',
+      'en': '',
+    },
+    'rlq7yv92': {
+      'ar': 'تتبع النوم',
+      'en': 'Nutrition tracking',
+    },
+    'qonpf1fu': {
+      'ar': 'سعر الخدمة',
+      'en': '',
+    },
+    'yynti8a5': {
+      'ar': '20000',
+      'en': '',
+    },
+    '53p63jo2': {
+      'ar': 'ازالة',
+      'en': '',
+    },
+    '5le2mucs': {
+      'ar': 'اضافة',
+      'en': '',
+    },
+    'wegb8pa5': {
+      'ar': 'تتبع اللقاحات',
+      'en': 'Nutrition tracking',
+    },
+    '26w5yxqt': {
+      'ar': 'سعر الخدمة',
+      'en': '',
+    },
+    'ea5xso1w': {
+      'ar': '40000',
+      'en': '',
+    },
+    'iqlyu0ts': {
+      'ar': 'ازالة',
+      'en': '',
+    },
+    '3z1wnbxn': {
+      'ar': 'اضافة',
+      'en': '',
     },
     'csz2jynr': {
       'ar': ' Use Service',
@@ -1022,27 +900,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // loginCopy
   {
-    'z1parlsi': {
+    't0b87xlh': {
       'ar': 'BloomBelly',
       'en': 'BloomBelly',
     },
-    'squf2nwq': {
+    'vyza79d0': {
       'ar': 'اهلا بك ',
       'en': 'Hey, you',
     },
-    'oeo8fnqe': {
+    'iosoxnb2': {
       'ar': 'Email address',
       'en': 'Email address',
     },
-    'mcyb56dk': {
+    'tbn12l91': {
       'ar': 'Password',
       'en': 'Password',
     },
-    'm30sy3v2': {
+    'yu3j7ww2': {
       'ar': 'تسجيل الدخول',
       'en': 'Log in',
     },
-    '5xrxu055': {
+    'vat9lyo9': {
       'ar': 'Forgot your password?',
       'en': 'Forgot your password?',
     },
@@ -1057,19 +935,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'اختر الخدمة التي ترغب بالحصول عليها',
       'en': 'Choose the service you want to get',
     },
-    '0hsa6yak': {
+    'ujykfpx3': {
       'ar': 'تتبع التغذية',
       'en': 'Nutrition tracking',
     },
-    'rolfqt1l': {
-      'ar': 'تتبع النظام الغذائي والاحتياجات الغذائية',
+    'txfmk7hm': {
+      'ar': 'تتبع النظام الغذائي \nوالاحتياجات الغذائية',
       'en': 'Track diet and nutritional needs',
     },
-    'mzqqxe4p': {
+    '05p2cb3v': {
       'ar': 'الدردشة مع الشات بوت',
       'en': 'Chat with a chatbot',
     },
-    'p8pinwig': {
+    '8abchmvn': {
       'ar': 'احصل على اجابات لأسئلتك',
       'en': 'Get answers to your questions',
     },
@@ -1104,7 +982,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'التالي',
       'en': 'the next',
     },
-    'if0labas': {
+    'q5sveotk': {
       'ar': 'Home',
       'en': 'Home',
     },
@@ -1167,7 +1045,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'Hello World',
       'en': 'Hello World',
     },
-    'zlokwln5': {
+    'e7dii7vn': {
       'ar': 'Home',
       'en': 'Home',
     },
@@ -1186,17 +1064,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'وقت النوم',
       'en': 'bedtime',
     },
-    'mrwnb1ob': {
-      'ar': 'الوقت',
-      'en': 'the time',
+    '7hgpyo67': {
+      'ar': 'وقت النوم',
+      'en': '',
     },
     'gt6bcwtl': {
       'ar': 'وقت الاستيقاظ',
       'en': 'wake-up time',
     },
-    'evnwo84k': {
-      'ar': 'الوقت',
-      'en': 'the time',
+    'ds06n1jr': {
+      'ar': 'وقت الاستيقاظ',
+      'en': '',
     },
     'vwg07qur': {
       'ar': 'ملاحظات حول جدول النوم',
@@ -1210,7 +1088,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'حفظ',
       'en': 'save',
     },
-    'd3w18qhp': {
+    'f0uysvbv': {
       'ar': 'Home',
       'en': 'Home',
     },
@@ -1220,10 +1098,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pmrohy1q': {
       'ar': 'childinfo',
       'en': 'childinfo',
-    },
-    'x7wx2oiw': {
-      'ar': ' January 1, 2020  ',
-      'en': 'January 1, 2020',
     },
     'jmpi5oca': {
       'ar': 'مقاييس الصحة الرئيسية',
@@ -1237,26 +1111,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'الوزن',
       'en': 'the weight',
     },
-    'pzkndq58': {
-      'ar': 'الحساسية',
-      'en': 'Allergy',
-    },
-    'dt8w4eet': {
-      'ar': 'الحالات الصحية',
-      'en': 'Health conditions',
-    },
-    'o2hozsij': {
-      'ar': 'سجلات التطعيمات',
-      'en': 'Immunization records',
-    },
-    'qrgislah': {
-      'ar': 'قائمة المفضلة',
-      'en': 'Favorites list',
-    },
-    'zqyc77dw': {
-      'ar': 'دفتر اللقاحات',
-      'en': 'Vaccination book',
-    },
     'z2hi2yog': {
       'ar': 'سجلات النشاط اليومي',
       'en': 'Daily activity logs',
@@ -1269,11 +1123,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'تتبع الوجبات',
       'en': 'Meal tracking',
     },
+    'o2hozsij': {
+      'ar': 'سجلات التطعيمات',
+      'en': 'Immunization records',
+    },
+    'zqyc77dw': {
+      'ar': 'دفتر اللقاحات',
+      'en': 'Vaccination book',
+    },
     'veo89f31': {
       'ar': 'تحرير الملف الشخصي',
       'en': 'Edit profile',
     },
-    'uryd33jr': {
+    'wpwkhay1': {
       'ar': 'Home',
       'en': 'Home',
     },
@@ -1383,10 +1245,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'Sleeptrack',
       'en': 'Sleeptrack',
     },
-    'h23vbfdu': {
-      'ar': 'تتبع نوم طفلك',
-      'en': 'Track your child\'s sleep',
-    },
     '21c2lzqc': {
       'ar': 'أنماط النوم الحديثة',
       'en': 'Modern Sleep Patterns',
@@ -1403,94 +1261,484 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': 'اخر نوم مسجل',
       'en': 'Last recorded sleep',
     },
-    'vwki4ys3': {
+    'c3mrgo0h': {
       'ar': 'Home',
       'en': 'Home',
     },
   },
   // chat1
   {
+    'hjeb3aur': {
+      'ar': 'User',
+      'en': '',
+    },
+    'a9inswzv': {
+      'ar': 'Ai Assistant',
+      'en': '',
+    },
     '6st70ehq': {
       'ar': 'sned',
       'en': 'sned',
     },
-    'mec0srh9': {
+    '1gn9b9sf': {
       'ar': 'chatbot',
       'en': 'chatbot',
     },
-    'xpua3wm5': {
+    '103qjwgy': {
       'ar': 'Home',
       'en': 'Home',
     },
   },
   // profilemother
   {
-    'roh137ss': {
-      'ar': 'الرصيد',
+    'y4txz4t8': {
+      'ar': 'الرصيد الحالي',
       'en': 'Balance',
     },
-    'zc8hsbv5': {
+    'iau6wfp7': {
       'ar': '\$47,892.50',
       'en': '\$47,892.50',
     },
-    '5z2rvjhk': {
-      'ar': 'Account Overview',
-      'en': 'Account Overview',
-    },
-    'atzjcgmy': {
-      'ar': 'الحالة',
-      'en': 'the condition',
-    },
-    'z8fsnvp0': {
+    '7i3pargy': {
       'ar': 'البريد الإلكتروني',
-      'en': 'e-mail',
+      'en': '',
     },
-    'gdhia27x': {
+    'u6bo03bb': {
       'ar': 'رقم الهاتف',
-      'en': 'phone number',
+      'en': '',
     },
-    '0miz35o2': {
-      'ar': 'الدور',
-      'en': 'The role',
+    '5mm5aug7': {
+      'ar': 'اسبوع الحمل',
+      'en': '',
+    },
+    'vz0bjjp0': {
+      'ar': 'الحالة',
+      'en': '',
     },
   },
-  // bill
+  // homepage
   {
-    '3ux9gcaq': {
-      'ar': 'ملخص الدفع',
-      'en': 'Payment Summary',
+    'e9daqzuh': {
+      'ar': 'Bloombelly',
+      'en': '',
     },
-    'b57vyt1f': {
+    '813zz75p': {
+      'ar': 'الاسبوع',
+      'en': '',
+    },
+    '2xitgrfz': {
+      'ar': 'Hello World',
+      'en': '',
+    },
+    'eo1u9r9v': {
+      'ar': 'رؤيتي اليومية',
+      'en': 'My daily vision',
+    },
+    'xzskous6': {
+      'ar': 'الوزن',
+      'en': '',
+    },
+    'z3ecmk39': {
+      'ar': 'الطول',
+      'en': '',
+    },
+    '3w5jju52': {
+      'ar': 'اليوم',
+      'en': '',
+    },
+    'clr26rdm': {
+      'ar': '20',
+      'en': '',
+    },
+    'xf4bwywj': {
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+    },
+    'j962xehy': {
+      'ar': 'بروفايل الطفل',
+      'en': 'Child profile',
+    },
+    'r1ktgbwk': {
+      'ar': 'الإعدادات',
+      'en': 'Settings',
+    },
+    'q0j75h0e': {
+      'ar': 'تواصل معنا',
+      'en': 'Contact us',
+    },
+    'ccoosqhd': {
+      'ar': 'تسجيل الخروج',
+      'en': 'Log out',
+    },
+    '0xzp6ojt': {
+      'ar': 'Home',
+      'en': 'Home',
+    },
+  },
+  // paid
+  {
+    'p6yvvgd9': {
+      'ar': 'premium',
+      'en': 'premium',
+    },
+    '1lvurtz3': {
+      'ar': 'رصيدك ',
+      'en': 'Your balance',
+    },
+    'jlsi9dfx': {
       'ar': '\$9.99',
       'en': '\$9.99',
     },
-    'rgxm7pxd': {
+    'mifasl46': {
       'ar': 'تكلفة الخدمة',
       'en': 'Service cost',
     },
-    'lu0ijupl': {
+    'uyhjobr3': {
       'ar': '\$25.50',
       'en': '\$25.50',
     },
-    'pohfaugy': {
+    '3nqhbpxl': {
       'ar': 'الرصيد الحالي ',
       'en': 'Current balance',
     },
-    'gkghg77v': {
+    'u6nmm6e8': {
       'ar': '\$15.51',
       'en': '\$15.51',
     },
-    'ixir55v9': {
+    'aht8x8ji': {
       'ar': 'الرصيد المتبقي',
       'en': 'Remaining balance',
     },
-    '491je617': {
-      'ar': 'Page Title',
-      'en': 'Page Title',
+    'o7s15exf': {
+      'ar': ' Use Service',
+      'en': 'Use Service',
     },
-    'wszxbogc': {
+  },
+  // toolsCopy
+  {
+    'kt74l44a': {
+      'ar': 'Tools',
+      'en': 'Tools',
+    },
+    'brgzsxmx': {
+      'ar': 'تتبع الحمل',
+      'en': 'Pregnancy tracking',
+    },
+    'pb0vftdh': {
+      'ar': 'شاهد نمو الطفل وتغيرات الجسم',
+      'en': 'Watch your baby\'s growth and body changes.',
+    },
+    'rm5cyco7': {
+      'ar': 'مراقبة الاختبارات و النتائج',
+      'en': 'Monitoring tests and results',
+    },
+    'heckm3wr': {
+      'ar': 'تتبع مقاييسك الصحية واختباراتك',
+      'en': 'Track your health metrics and tests',
+    },
+    's9oxk9uz': {
+      'ar': 'دليل الإسعافات الأولية',
+      'en': 'First Aid Guide',
+    },
+    'q2rvy4f9': {
+      'ar': 'تعلم كيفية التعامل مع حالات الطوارئ',
+      'en': 'Learn how to handle emergencies',
+    },
+    '49ll2mk2': {
+      'ar': 'تتبع التغذية',
+      'en': 'Nutrition tracking',
+    },
+    '7n8l8tsk': {
+      'ar': 'تتبع النظام الغذائي والاحتياجات الغذائية',
+      'en': 'Track diet and nutritional needs',
+    },
+    'lq5vv3bl': {
+      'ar': 'الدردشة مع الشات بوت',
+      'en': 'Chat with a chatbot',
+    },
+    'ddnysw0s': {
+      'ar': 'احصل على اجابات لأسئلتك',
+      'en': 'Get answers to your questions',
+    },
+    'brnr7hod': {
+      'ar': 'تتبع الركلات',
+      'en': 'Track kicks',
+    },
+    'c0chlfyv': {
+      'ar': 'مراقبة أنماط حركة الجنين',
+      'en': 'Monitoring fetal movement patterns',
+    },
+    'wtdbb7yo': {
+      'ar': 'تتبع اللقاحات',
+      'en': 'Vaccine tracking',
+    },
+    'ipmdiyv5': {
+      'ar': 'تعرفي على مواعيد التطعيمات الضرورية لطفلك وفقًا لعمره\n\n',
+      'en':
+          'Learn about the necessary vaccination dates for your child according to his age.',
+    },
+    'tq4u99hk': {
+      'ar': 'تتبع النوم',
+      'en': 'Sleep tracking',
+    },
+    'durc1h7n': {
+      'ar': 'راقبي نمط نوم الطفل وعدد الساعات حسب فئته العمرية ',
+      'en':
+          'Monitor your child\'s sleep pattern and the number of hours according to his age group.',
+    },
+    'zikva1ow': {
+      'ar': 'تتبع النمو',
+      'en': 'Track growth',
+    },
+    'nyfy5gew': {
+      'ar': 'شاهدي تطور الوزن والطول شهريًا حسب معايير منظمة الصحة',
+      'en':
+          'See your monthly weight and height development according to WHO standards.',
+    },
+    'o291vzyp': {
       'ar': 'Home',
       'en': 'Home',
+    },
+    'y9ei3lze': {
+      'ar': 'Chat',
+      'en': 'Chat',
+    },
+    'vugrtk36': {
+      'ar': 'Favorites',
+      'en': 'Favorites',
+    },
+    'nc1ur7dg': {
+      'ar': 'Profile',
+      'en': 'Profile',
+    },
+    'q2ctmks1': {
+      'ar': 'الصفحة الرئيسية',
+      'en': 'Home',
+    },
+    'gd25shg1': {
+      'ar': 'بروفايل الطفل',
+      'en': 'Child profile',
+    },
+    'ma5a0mem': {
+      'ar': 'الإعدادات',
+      'en': 'Settings',
+    },
+    '9rrnk3el': {
+      'ar': 'تواصل معنا',
+      'en': 'Contact us',
+    },
+    '8pemt3xp': {
+      'ar': 'تسجيل الخروج',
+      'en': 'Log out',
+    },
+    '3hfzfjij': {
+      'ar': 'tools',
+      'en': 'tools',
+    },
+  },
+  // charts
+  {
+    '08pgfk0z': {
+      'ar': 'age',
+      'en': '',
+    },
+    'ylz81kk9': {
+      'ar': 'avg girls tall',
+      'en': '',
+    },
+    'z99edpdc': {
+      'ar': 'girls tall',
+      'en': '',
+    },
+    'dk6psx1d': {
+      'ar': 'age',
+      'en': '',
+    },
+    'obxsmdg8': {
+      'ar': 'tall',
+      'en': '',
+    },
+    'znbdqoq1': {
+      'ar': 'age',
+      'en': '',
+    },
+    'avdf9q6s': {
+      'ar': 'avg boy tall',
+      'en': '',
+    },
+    '6buwz7bk': {
+      'ar': 'girls tall',
+      'en': '',
+    },
+    '7efdfh7x': {
+      'ar': 'age',
+      'en': '',
+    },
+    '2rxcyg9x': {
+      'ar': 'tall',
+      'en': '',
+    },
+    'cuj6wo6y': {
+      'ar': 'age',
+      'en': '',
+    },
+    'fnqqzr7f': {
+      'ar': 'avg girl wieght',
+      'en': '',
+    },
+    '4ppnzb9a': {
+      'ar': '',
+      'en': '',
+    },
+    'i7uuynf2': {
+      'ar': 'age',
+      'en': '',
+    },
+    'a1m3l2lz': {
+      'ar': 'tall',
+      'en': '',
+    },
+    'a1guctpx': {
+      'ar': 'age',
+      'en': '',
+    },
+    'mt3os39j': {
+      'ar': 'avg boy wieght',
+      'en': '',
+    },
+    'godd57ow': {
+      'ar': '',
+      'en': '',
+    },
+    'khh2j6ht': {
+      'ar': 'age',
+      'en': '',
+    },
+    'tym74ydl': {
+      'ar': 'tall',
+      'en': '',
+    },
+    '94v5fqt6': {
+      'ar': 'check your baby hight status',
+      'en': '',
+    },
+    'ajvnnfpg': {
+      'ar': 'hight',
+      'en': '',
+    },
+    'v4kmhu0k': {
+      'ar': 'check your baby wieght status',
+      'en': '',
+    },
+    'wfsm1inf': {
+      'ar': 'weight',
+      'en': '',
+    },
+    'u8r3b0b4': {
+      'ar': 'Page Title',
+      'en': '',
+    },
+    '2lkekd8e': {
+      'ar': 'Home',
+      'en': 'Home',
+    },
+  },
+  // whighttracking
+  {
+    'csi7kvv2': {
+      'ar': 'Today\'s Weight',
+      'en': '',
+    },
+    't8h4azkl': {
+      'ar': 'Enter weight',
+      'en': '',
+    },
+    'vcv2kb3t': {
+      'ar': 'kg',
+      'en': '',
+    },
+    'bh6h8b0q': {
+      'ar': 'Date:',
+      'en': '',
+    },
+    '0grpgi05': {
+      'ar': 'Today, Dec 15',
+      'en': '',
+    },
+    'n2g1orfv': {
+      'ar': 'Notes (optional)',
+      'en': '',
+    },
+    '00yujm0d': {
+      'ar': 'Save Weight',
+      'en': '',
+    },
+    'znzz8zgc': {
+      'ar': 'Quick Summary',
+      'en': '',
+    },
+    'bk2flfll': {
+      'ar': 'Current Weight',
+      'en': '',
+    },
+    'phijxlky': {
+      'ar': '68.5 kg',
+      'en': '',
+    },
+    'zj6t8dw4': {
+      'ar': 'Total Gain',
+      'en': '',
+    },
+    'jj03agtx': {
+      'ar': '+12.3 kg',
+      'en': '',
+    },
+    '5m2b2pts': {
+      'ar': 'Last 7 Days',
+      'en': '',
+    },
+    'bzgszcab': {
+      'ar': '+0.4 kg',
+      'en': '',
+    },
+    'l3nlm2ro': {
+      'ar': 'Gestational Week',
+      'en': '',
+    },
+    'j57a0byp': {
+      'ar': 'Week 28',
+      'en': '',
+    },
+    'g30kcmfe': {
+      'ar': 'Weight Tracking',
+      'en': '',
+    },
+  },
+  // Setting
+  {
+    'iokzk73e': {
+      'ar': 'الإعدادت',
+      'en': '',
+    },
+    'to9wxgd0': {
+      'ar': ' الملف الشخصي للأم',
+      'en': '',
+    },
+    'vbxkb5m6': {
+      'ar': 'الأدوات',
+      'en': '',
+    },
+    '8pspb1ex': {
+      'ar': 'حساب الطفل',
+      'en': '',
+    },
+    'teu6z9kz': {
+      'ar': 'الخدمات المدفوعة',
+      'en': '',
+    },
+    'a5pzixek': {
+      'ar': 'Home',
+      'en': '',
     },
   },
   // Miscellaneous
