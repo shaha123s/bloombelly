@@ -116,7 +116,9 @@ class _ChoseroleWidgetState extends State<ChoseroleWidget> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Select Role',
+                    FFLocalizations.of(context).getText(
+                      'qnlvu3hs' /* Select Role */,
+                    ),
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                           fontFamily: 'play',
                           fontSize: 28.0,
@@ -131,6 +133,11 @@ class _ChoseroleWidgetState extends State<ChoseroleWidget> {
                     highlightColor: Colors.transparent,
                     onTap: () async {
                       FFAppState().role = 'mom';
+                      _model.firstmomcolor =
+                          FlutterFlowTheme.of(context).accent1;
+                      _model.preagnetmomcolor = Color(4294567398);
+                      _model.dadcolor = Color(4292337650);
+                      safeSetState(() {});
                     },
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 0.89,
@@ -138,16 +145,23 @@ class _ChoseroleWidgetState extends State<ChoseroleWidget> {
                       decoration: BoxDecoration(
                         color: Color(0xFFCAE3E1),
                         borderRadius: BorderRadius.circular(16.0),
+                        border: Border.all(
+                          color: FlutterFlowTheme.of(context).accent1,
+                        ),
                       ),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(
-                            'assets/images/Picture1.png',
-                            width: MediaQuery.sizeOf(context).width * 0.2,
-                            height: MediaQuery.sizeOf(context).height * 0.12,
-                            fit: BoxFit.contain,
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 20.0, 0.0),
+                            child: Image.asset(
+                              'assets/images/Baby_clothes_1.png',
+                              width: MediaQuery.sizeOf(context).width * 0.2,
+                              height: MediaQuery.sizeOf(context).height * 0.12,
+                              fit: BoxFit.contain,
+                            ),
                           ),
                           Padding(
                             padding: EdgeInsets.all(12.0),
@@ -157,7 +171,9 @@ class _ChoseroleWidgetState extends State<ChoseroleWidget> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  'حامل لأول مرة',
+                                  FFLocalizations.of(context).getText(
+                                    'x0jdobz8' /* حامل لأول مرة */,
+                                  ),
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
@@ -168,7 +184,9 @@ class _ChoseroleWidgetState extends State<ChoseroleWidget> {
                                       ),
                                 ),
                                 Text(
-                                  'الأمهات الحوامل لأول مرة',
+                                  FFLocalizations.of(context).getText(
+                                    'id5h7k8z' /* الأمهات الحوامل لأول مرة */,
+                                  ),
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
@@ -207,6 +225,11 @@ class _ChoseroleWidgetState extends State<ChoseroleWidget> {
                     highlightColor: Colors.transparent,
                     onTap: () async {
                       FFAppState().role = 'pmom';
+                      _model.firstmomcolor =
+                          FlutterFlowTheme.of(context).accent1;
+                      _model.preagnetmomcolor = Color(4294567398);
+                      _model.dadcolor = Color(4292337650);
+                      safeSetState(() {});
                     },
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 0.9,
@@ -214,6 +237,9 @@ class _ChoseroleWidgetState extends State<ChoseroleWidget> {
                       decoration: BoxDecoration(
                         color: Color(0xFFF9E5E6),
                         borderRadius: BorderRadius.circular(16.0),
+                        border: Border.all(
+                          color: FlutterFlowTheme.of(context).accent1,
+                        ),
                       ),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
@@ -233,7 +259,9 @@ class _ChoseroleWidgetState extends State<ChoseroleWidget> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
-                                  'الأم الحامل ',
+                                  FFLocalizations.of(context).getText(
+                                    'z5xvidgq' /* الأم الحامل  */,
+                                  ),
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
@@ -244,7 +272,9 @@ class _ChoseroleWidgetState extends State<ChoseroleWidget> {
                                       ),
                                 ),
                                 Text(
-                                  'الأمهات الحوامل مع طفل',
+                                  FFLocalizations.of(context).getText(
+                                    'iodgtzqp' /* الأمهات الحوامل مع طفل */,
+                                  ),
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
@@ -283,6 +313,11 @@ class _ChoseroleWidgetState extends State<ChoseroleWidget> {
                     highlightColor: Colors.transparent,
                     onTap: () async {
                       FFAppState().role = 'dad';
+                      _model.firstmomcolor =
+                          FlutterFlowTheme.of(context).accent1;
+                      _model.preagnetmomcolor = Color(4294567398);
+                      _model.dadcolor = Color(4292337650);
+                      safeSetState(() {});
                     },
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 0.9,
@@ -300,62 +335,49 @@ class _ChoseroleWidgetState extends State<ChoseroleWidget> {
                           )
                         ],
                         borderRadius: BorderRadius.circular(16.0),
+                        border: Border.all(
+                          color: FlutterFlowTheme.of(context).accent1,
+                        ),
                       ),
-                      child: InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          FFAppState().role = 'dad';
-                          safeSetState(() {});
-                        },
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              'assets/images/Picture3.png',
-                              width: MediaQuery.sizeOf(context).width * 0.2,
-                              height: MediaQuery.sizeOf(context).height * 0.12,
-                              fit: BoxFit.contain,
-                            ),
-                            Padding(
-                              padding: EdgeInsets.all(12.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'الأب',
-                                    textAlign: TextAlign.center,
-                                    style: FlutterFlowTheme.of(context)
-                                        .titleMedium
-                                        .override(
-                                          fontFamily: 'gulzar',
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.normal,
-                                        ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/Picture3.png',
+                            width: MediaQuery.sizeOf(context).width * 0.2,
+                            height: MediaQuery.sizeOf(context).height * 0.12,
+                            fit: BoxFit.contain,
+                          ),
+                          Padding(
+                            padding: EdgeInsets.all(12.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    '5f6hr9h8' /* الأب */,
                                   ),
-                                  Text(
-                                    'شركاء الأمهات الحوامل',
-                                    textAlign: TextAlign.center,
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodySmall
-                                        .override(
-                                          font: GoogleFonts.inter(
-                                            fontWeight:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodySmall
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodySmall
-                                                    .fontStyle,
-                                          ),
-                                          color: Color(0xFF757575),
-                                          letterSpacing: 0.0,
+                                  textAlign: TextAlign.center,
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleMedium
+                                      .override(
+                                        fontFamily: 'gulzar',
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                ),
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    '6mxxk9kv' /* شركاء الأمهات الحوامل */,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        font: GoogleFonts.inter(
                                           fontWeight:
                                               FlutterFlowTheme.of(context)
                                                   .bodySmall
@@ -365,12 +387,20 @@ class _ChoseroleWidgetState extends State<ChoseroleWidget> {
                                                   .bodySmall
                                                   .fontStyle,
                                         ),
-                                  ),
-                                ].divide(SizedBox(height: 12.0)),
-                              ),
+                                        color: Color(0xFF757575),
+                                        letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodySmall
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodySmall
+                                            .fontStyle,
+                                      ),
+                                ),
+                              ].divide(SizedBox(height: 12.0)),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -379,9 +409,11 @@ class _ChoseroleWidgetState extends State<ChoseroleWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: () async {
-                        context.pushNamed(DateWidget.routeName);
+                        context.goNamed(DateWidget.routeName);
                       },
-                      text: 'Continue',
+                      text: FFLocalizations.of(context).getText(
+                        'qmp6m75b' /* Continue */,
+                      ),
                       options: FFButtonOptions(
                         width: MediaQuery.sizeOf(context).width * 0.9,
                         height: MediaQuery.sizeOf(context).height * 0.07,

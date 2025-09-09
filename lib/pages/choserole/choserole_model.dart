@@ -10,6 +10,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class ChoseroleModel extends FlutterFlowModel<ChoseroleWidget> {
+  ///  Local state fields for this page.
+
+  Color? firstmomcolor = Color(4291486689);
+
+  Color? preagnetmomcolor = Color(4294567398);
+
+  Color? dadcolor = Color(4292337650);
+
   @override
   void initState(BuildContext context) {}
 

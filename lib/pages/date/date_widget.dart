@@ -125,7 +125,9 @@ class _DateWidgetState extends State<DateWidget> {
                       ),
                     ),
                     Text(
-                      'في أي مرحلة من حملك',
+                      FFLocalizations.of(context).getText(
+                        'tnb1z6zu' /* في أي مرحلة من حملك */,
+                      ),
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
                             fontFamily: 'Mirza',
@@ -139,13 +141,17 @@ class _DateWidgetState extends State<DateWidget> {
                           EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                       child: FlutterFlowDropDown<String>(
                         controller: _model.dropDown1ValueController ??=
-                            FormFieldController<String>(
-                          _model.dropDown1Value ??= 'اسبوع  الحمل',
-                        ),
+                            FormFieldController<String>(null),
                         options: [
-                          'تاريخ اخر دورة',
-                          'اسبوع  الحمل',
-                          'تاريخ الولادة'
+                          FFLocalizations.of(context).getText(
+                            '9ju3wey7' /* تاريخ اخر دورة */,
+                          ),
+                          FFLocalizations.of(context).getText(
+                            'jeph9igt' /* اسبوع  الحمل */,
+                          ),
+                          FFLocalizations.of(context).getText(
+                            'b584xfha' /* تاريخ الولادة */,
+                          )
                         ],
                         onChanged: (val) async {
                           safeSetState(() => _model.dropDown1Value = val);
@@ -211,8 +217,12 @@ class _DateWidgetState extends State<DateWidget> {
                                       .bodyMedium
                                       .fontStyle,
                                 ),
-                        hintText: 'Select...',
-                        searchHintText: 'Search...',
+                        hintText: FFLocalizations.of(context).getText(
+                          'bhd82zaq' /* Select... */,
+                        ),
+                        searchHintText: FFLocalizations.of(context).getText(
+                          '6gv9kz3k' /* Search... */,
+                        ),
                         icon: Icon(
                           Icons.keyboard_arrow_down_rounded,
                           color: FlutterFlowTheme.of(context).secondaryText,
@@ -232,7 +242,8 @@ class _DateWidgetState extends State<DateWidget> {
                         isMultiSelect: false,
                       ),
                     ),
-                    if (_model.dropDown1Value == 'تاريخ اخر دورة')
+                    if ((_model.dropDown1Value == 'تاريخ اخر دورة') ||
+                        (_model.dropDown1Value == 'Date of last period'))
                       Padding(
                         padding: EdgeInsets.all(16.0),
                         child: Container(
@@ -321,7 +332,9 @@ class _DateWidgetState extends State<DateWidget> {
                                       });
                                     }
                                   },
-                                  text: 'ادخلي تاريخ اخر دورة شهرية',
+                                  text: FFLocalizations.of(context).getText(
+                                    '4c0el6ko' /* ادخلي تاريخ اخر دورة شهرية */,
+                                  ),
                                   options: FFButtonOptions(
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.9,
@@ -371,7 +384,9 @@ class _DateWidgetState extends State<DateWidget> {
                       child: Container(
                         decoration: BoxDecoration(),
                         child: Visibility(
-                          visible: _model.dropDown1Value == 'اسبوع  الحمل',
+                          visible:
+                              (_model.dropDown1Value == 'Pregnancy week') ||
+                                  (_model.dropDown1Value == 'اسبوع  الحمل'),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
@@ -405,7 +420,9 @@ class _DateWidgetState extends State<DateWidget> {
                                             .labelMedium
                                             .fontStyle,
                                       ),
-                                  hintText: 'TextField',
+                                  hintText: FFLocalizations.of(context).getText(
+                                    '2a7526fs' /* TextField */,
+                                  ),
                                   hintStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -480,6 +497,7 @@ class _DateWidgetState extends State<DateWidget> {
                                           .bodyMedium
                                           .fontStyle,
                                     ),
+                                keyboardType: TextInputType.number,
                                 cursorColor:
                                     FlutterFlowTheme.of(context).primaryText,
                                 validator: _model.textControllerValidator
@@ -490,7 +508,8 @@ class _DateWidgetState extends State<DateWidget> {
                         ),
                       ),
                     ),
-                    if (_model.dropDown1Value == 'تاريخ الولادة')
+                    if ((_model.dropDown1Value == 'تاريخ الولادة') ||
+                        (_model.dropDown1Value == 'birth date'))
                       Padding(
                         padding: EdgeInsets.all(16.0),
                         child: Container(
@@ -589,7 +608,9 @@ class _DateWidgetState extends State<DateWidget> {
                                       });
                                     }
                                   },
-                                  text: 'ادخلي تاريخ الولادة',
+                                  text: FFLocalizations.of(context).getText(
+                                    'ia6k853u' /* ادخلي تاريخ الولادة */,
+                                  ),
                                   options: FFButtonOptions(
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.9,
@@ -634,28 +655,105 @@ class _DateWidgetState extends State<DateWidget> {
                           ),
                         ),
                       ),
-                    Text(
-                      valueOrDefault<String>(
-                        _model.datelmp?.toString(),
-                        '33',
-                      ),
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            font: GoogleFonts.inter(
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
-                            ),
-                            letterSpacing: 0.0,
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .fontStyle,
+                    FFButtonWidget(
+                      onPressed: () async {
+                        if (_model.selectedInputType == 'تاريخ اخر دورة') {
+                          _model.datelmp =
+                              await actions.calculatePregnancyWeekFromLMP(
+                            _model.datePicked1!.toString(),
+                          );
+                          FFAppState().week = _model.datelmp!;
+                          FFAppState().weeks = _model.datelmp!;
+                          safeSetState(() {});
+                          await PregnanciesTable().insert({
+                            'last_period': _model.datePicked1?.toString(),
+                            'due_date': 'forget',
+                            'user_id': currentUserUid,
+                            'weekno': _model.datelmp,
+                          });
+                        }
+                        if (FFAppState().role == 'تاريخ الولادة') {
+                          _model.datedue =
+                              await actions.calculatePregnancyWeekFromDueDate(
+                            _model.datePicked2!.toString(),
+                          );
+                          FFAppState().week = _model.datedue!;
+                          FFAppState().weeks = _model.datedue!;
+                          safeSetState(() {});
+                          await PregnanciesTable().insert({
+                            'due_date': _model.datePicked2?.toString(),
+                            'last_period': 'forget',
+                            'created_at':
+                                supaSerialize<DateTime>(getCurrentTimestamp),
+                            'user_id': currentUserUid,
+                            'weekno': _model.datedue,
+                          });
+                        }
+                        if (_model.dropDown1Value == 'تاريخ الحمل') {
+                          FFAppState().week =
+                              int.parse(_model.textController.text);
+                          FFAppState().weeks =
+                              int.parse(_model.textController.text);
+                          safeSetState(() {});
+                          await PregnanciesTable().insert({
+                            'due_date': 'forget',
+                            'last_period': 'forget',
+                            'created_at':
+                                supaSerialize<DateTime>(getCurrentTimestamp),
+                            'user_id': currentUserUid,
+                            'weekno': int.tryParse(_model.textController.text),
+                          });
+                        }
+                        await UsersTable().update(
+                          data: {
+                            'pragnce_week': FFAppState().weeks,
+                          },
+                          matchingRows: (rows) => rows.eqOrNull(
+                            'id',
+                            currentUserUid,
                           ),
+                        );
+
+                        context.pushNamed(ToolsWidget.routeName);
+
+                        safeSetState(() {});
+                      },
+                      text: FFLocalizations.of(context).getText(
+                        'e71ni0pq' /* حساب المرحلة */,
+                      ),
+                      options: FFButtonOptions(
+                        width: double.infinity,
+                        height: 50.0,
+                        padding: EdgeInsets.all(8.0),
+                        iconPadding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: Color(0xFF7986CB),
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleSmall.override(
+                                  font: GoogleFonts.interTight(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
+                                  color: Colors.white,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .fontStyle,
+                                ),
+                        elevation: 2.0,
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(24.0),
+                      ),
                     ),
                   ].divide(SizedBox(height: 24.0)),
                 ),

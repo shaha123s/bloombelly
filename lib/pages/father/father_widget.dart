@@ -67,9 +67,14 @@ class _FatherWidgetState extends State<FatherWidget> {
               color: Color(0xFF333333),
               size: 24.0,
             ),
+            onPressed: () async {
+              context.pushNamed(ToolsWidget.routeName);
+            },
           ),
           title: Text(
-            'Track Pregnancy',
+            FFLocalizations.of(context).getText(
+              'v7kkf8ur' /* Track Pregnancy */,
+            ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'play',
                   color: Color(0xFF333333),
@@ -227,257 +232,16 @@ class _FatherWidgetState extends State<FatherWidget> {
                             );
                           },
                         ),
-                        FutureBuilder<List<WeeklyTemplatesRow>>(
-                          future: WeeklyTemplatesTable().querySingleRow(
-                            queryFn: (q) => q.eqOrNull(
-                              'week_no',
-                              FFAppState().week,
-                            ),
-                          ),
-                          builder: (context, snapshot) {
-                            // Customize what your widget looks like when it's loading.
-                            if (!snapshot.hasData) {
-                              return Center(
-                                child: SizedBox(
-                                  width: 50.0,
-                                  height: 50.0,
-                                  child: SpinKitRipple(
-                                    color: FlutterFlowTheme.of(context).primary,
-                                    size: 50.0,
-                                  ),
-                                ),
-                              );
-                            }
-                            List<WeeklyTemplatesRow> rowWeeklyTemplatesRowList =
-                                snapshot.data!;
-
-                            final rowWeeklyTemplatesRow =
-                                rowWeeklyTemplatesRowList.isNotEmpty
-                                    ? rowWeeklyTemplatesRowList.first
-                                    : null;
-
-                            return Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                InkWell(
-                                  splashColor: Colors.transparent,
-                                  focusColor: Colors.transparent,
-                                  hoverColor: Colors.transparent,
-                                  highlightColor: Colors.transparent,
-                                  child: Container(
-                                    width:
-                                        MediaQuery.sizeOf(context).width * 0.45,
-                                    height:
-                                        MediaQuery.sizeOf(context).height * 0.2,
-                                    decoration: BoxDecoration(
-                                      color: Color(0xFFD7DFF2),
-                                      borderRadius: BorderRadius.circular(16.0),
-                                      border: Border.all(
-                                        color: Color(0xFF7B8283),
-                                      ),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsets.all(16.0),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    valueOrDefault<String>(
-                                                      rowWeeklyTemplatesRow
-                                                          ?.fetusWeightG,
-                                                      '-',
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .headlineMedium
-                                                        .override(
-                                                          font: GoogleFonts
-                                                              .interTight(
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .headlineMedium
-                                                                    .fontStyle,
-                                                          ),
-                                                          fontSize: 20.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .headlineMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                  ),
-                                                  Text(
-                                                    'الوزن',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          font:
-                                                              GoogleFonts.inter(
-                                                            fontWeight:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                          ),
-                                                          color:
-                                                              Color(0xFF666666),
-                                                          fontSize: 14.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontWeight,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                  ),
-                                                ],
-                                              ),
-                                              Icon(
-                                                Icons.fitness_center,
-                                                color: Color(0xFF666666),
-                                                size: 24.0,
-                                              ),
-                                            ].divide(SizedBox(width: 8.0)),
-                                          ),
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    valueOrDefault<String>(
-                                                      rowWeeklyTemplatesRow
-                                                          ?.fetusLengthCm,
-                                                      '-',
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .headlineMedium
-                                                        .override(
-                                                          font: GoogleFonts
-                                                              .interTight(
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .headlineMedium
-                                                                    .fontStyle,
-                                                          ),
-                                                          fontSize: 20.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .headlineMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                  ),
-                                                  Text(
-                                                    'الطول',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          font:
-                                                              GoogleFonts.inter(
-                                                            fontWeight:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                          ),
-                                                          color:
-                                                              Color(0xFF666666),
-                                                          fontSize: 14.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontWeight,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
-                                                  ),
-                                                ],
-                                              ),
-                                              Icon(
-                                                Icons.straighten,
-                                                color: Color(0xFF666666),
-                                                size: 24.0,
-                                              ),
-                                            ].divide(SizedBox(width: 8.0)),
-                                          ),
-                                        ].divide(SizedBox(height: 8.0)),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.network(
-                                    rowWeeklyTemplatesRow!.media!,
-                                    width:
-                                        MediaQuery.sizeOf(context).width * 0.2,
-                                    height:
-                                        MediaQuery.sizeOf(context).height * 0.1,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ].divide(SizedBox(width: 5.0)),
-                            );
-                          },
-                        ),
                         Align(
-                          alignment: AlignmentDirectional(1.0, 0.0),
+                          alignment: AlignmentDirectional(-1.0, 0.0),
                           child: RichText(
                             textScaler: MediaQuery.of(context).textScaler,
                             text: TextSpan(
                               children: [
                                 TextSpan(
-                                  text: 'الاسبوع  ',
+                                  text: FFLocalizations.of(context).getText(
+                                    'zdpzzwbm' /* الاسبوع   */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -498,7 +262,9 @@ class _FatherWidgetState extends State<FatherWidget> {
                                   style: TextStyle(),
                                 ),
                                 TextSpan(
-                                  text: '  من الحمل',
+                                  text: FFLocalizations.of(context).getText(
+                                    '6b9cnpwz' /*   من الحمل */,
+                                  ),
                                   style: TextStyle(),
                                 )
                               ],
@@ -521,10 +287,292 @@ class _FatherWidgetState extends State<FatherWidget> {
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              FutureBuilder<List<WeeklyTemplatesRow>>(
+                                future: WeeklyTemplatesTable().querySingleRow(
+                                  queryFn: (q) => q,
+                                ),
+                                builder: (context, snapshot) {
+                                  // Customize what your widget looks like when it's loading.
+                                  if (!snapshot.hasData) {
+                                    return Center(
+                                      child: SizedBox(
+                                        width: 50.0,
+                                        height: 50.0,
+                                        child: SpinKitRipple(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primary,
+                                          size: 50.0,
+                                        ),
+                                      ),
+                                    );
+                                  }
+                                  List<WeeklyTemplatesRow>
+                                      rowWeeklyTemplatesRowList =
+                                      snapshot.data!;
+
+                                  final rowWeeklyTemplatesRow =
+                                      rowWeeklyTemplatesRowList.isNotEmpty
+                                          ? rowWeeklyTemplatesRowList.first
+                                          : null;
+
+                                  return Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          context.pushNamed(
+                                              TracKicksWidget.routeName);
+                                        },
+                                        child: Container(
+                                          width:
+                                              MediaQuery.sizeOf(context).width *
+                                                  0.45,
+                                          height: MediaQuery.sizeOf(context)
+                                                  .height *
+                                              0.2,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xFFD7DFF2),
+                                            borderRadius:
+                                                BorderRadius.circular(16.0),
+                                            border: Border.all(
+                                              color: Color(0xFF7B8283),
+                                            ),
+                                          ),
+                                          child: Padding(
+                                            padding: EdgeInsets.all(16.0),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  children: [
+                                                    Column(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Text(
+                                                          valueOrDefault<
+                                                              String>(
+                                                            rowWeeklyTemplatesRow
+                                                                ?.fetusWeightG,
+                                                            'الوزن',
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .headlineMedium
+                                                              .override(
+                                                                font: GoogleFonts
+                                                                    .interTight(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .headlineMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                                fontSize: 20.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .headlineMedium
+                                                                    .fontStyle,
+                                                              ),
+                                                        ),
+                                                        Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'baolrqf9' /* الوزن */,
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .inter(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                                color: Color(
+                                                                    0xFF666666),
+                                                                fontSize: 14.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                              ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    Icon(
+                                                      Icons.fitness_center,
+                                                      color: Color(0xFF666666),
+                                                      size: 24.0,
+                                                    ),
+                                                  ].divide(
+                                                      SizedBox(width: 8.0)),
+                                                ),
+                                                Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  children: [
+                                                    Column(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Text(
+                                                          valueOrDefault<
+                                                              String>(
+                                                            rowWeeklyTemplatesRow
+                                                                ?.fetusLengthCm,
+                                                            'الطول',
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .headlineMedium
+                                                              .override(
+                                                                font: GoogleFonts
+                                                                    .interTight(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .headlineMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                                fontSize: 20.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .headlineMedium
+                                                                    .fontStyle,
+                                                              ),
+                                                        ),
+                                                        Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'wxhco17o' /* الطول */,
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .inter(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                                color: Color(
+                                                                    0xFF666666),
+                                                                fontSize: 14.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                              ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    Icon(
+                                                      Icons.straighten,
+                                                      color: Color(0xFF666666),
+                                                      size: 24.0,
+                                                    ),
+                                                  ].divide(
+                                                      SizedBox(width: 8.0)),
+                                                ),
+                                              ].divide(SizedBox(height: 8.0)),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        width:
+                                            MediaQuery.sizeOf(context).width *
+                                                0.45,
+                                        height:
+                                            MediaQuery.sizeOf(context).height *
+                                                0.2,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(16.0),
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                          child: Image.network(
+                                            rowWeeklyTemplatesRow!.media!,
+                                            width: MediaQuery.sizeOf(context)
+                                                    .width *
+                                                0.4,
+                                            height: MediaQuery.sizeOf(context)
+                                                    .height *
+                                                0.2,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                      ),
+                                    ].divide(SizedBox(width: 5.0)),
+                                  );
+                                },
+                              ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, -1.0),
+                                alignment: AlignmentDirectional(-1.0, -1.0),
                                 child: Text(
-                                  'كيف ينمو طفلك؟',
+                                  FFLocalizations.of(context).getText(
+                                    'uufcfcrx' /* كيف ينمو طفلك؟ */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -537,11 +585,18 @@ class _FatherWidgetState extends State<FatherWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, -1.0),
+                                alignment: AlignmentDirectional(-1.0, -1.0),
                                 child: Text(
                                   valueOrDefault<String>(
-                                    containerWeeklyFatherGuidanceRow
-                                        ?.developmentDescription,
+                                    FFLocalizations.of(context).languageCode ==
+                                            'ar'
+                                        ? valueOrDefault<String>(
+                                            containerWeeklyFatherGuidanceRow
+                                                ?.developmentDescription,
+                                            '-',
+                                          )
+                                        : containerWeeklyFatherGuidanceRow
+                                            ?.developmentDescriptionEn,
                                     '-',
                                   ),
                                   textAlign: TextAlign.center,
@@ -580,9 +635,11 @@ class _FatherWidgetState extends State<FatherWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(1.0, -1.0),
+                                alignment: AlignmentDirectional(-1.0, -1.0),
                                 child: Text(
-                                  'ما هي تغيرات زوجتك الجسدية؟',
+                                  FFLocalizations.of(context).getText(
+                                    'l5ctptaq' /* ما هي تغيرات زوجتك الجسدية؟ */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -595,11 +652,18 @@ class _FatherWidgetState extends State<FatherWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, -1.0),
+                                alignment: AlignmentDirectional(-1.0, -1.0),
                                 child: Text(
                                   valueOrDefault<String>(
-                                    containerWeeklyFatherGuidanceRow
-                                        ?.bodyChanges,
+                                    FFLocalizations.of(context).languageCode ==
+                                            'ar'
+                                        ? valueOrDefault<String>(
+                                            containerWeeklyFatherGuidanceRow
+                                                ?.bodyChanges,
+                                            '-',
+                                          )
+                                        : containerWeeklyFatherGuidanceRow
+                                            ?.bodyChangesEn,
                                     '-',
                                   ),
                                   textAlign: TextAlign.center,
@@ -638,9 +702,11 @@ class _FatherWidgetState extends State<FatherWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(1.0, -1.0),
+                                alignment: AlignmentDirectional(-1.0, -1.0),
                                 child: Text(
-                                  'ما هي تغييرات زوجتك النفسية؟',
+                                  FFLocalizations.of(context).getText(
+                                    'oj98mang' /* ما هي تغييرات زوجتك النفسية؟ */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -653,11 +719,18 @@ class _FatherWidgetState extends State<FatherWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, -1.0),
+                                alignment: AlignmentDirectional(-1.0, -1.0),
                                 child: Text(
                                   valueOrDefault<String>(
-                                    containerWeeklyFatherGuidanceRow
-                                        ?.psychChanges,
+                                    FFLocalizations.of(context).languageCode ==
+                                            'ar'
+                                        ? valueOrDefault<String>(
+                                            containerWeeklyFatherGuidanceRow
+                                                ?.psychChanges,
+                                            '-',
+                                          )
+                                        : containerWeeklyFatherGuidanceRow
+                                            ?.psychChangesEn,
                                     '-',
                                   ),
                                   textAlign: TextAlign.center,
@@ -696,9 +769,11 @@ class _FatherWidgetState extends State<FatherWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(1.0, -1.0),
+                                alignment: AlignmentDirectional(-1.0, -1.0),
                                 child: Text(
-                                  'ما هو دورك في هذه المرحلة؟',
+                                  FFLocalizations.of(context).getText(
+                                    '0p1h33w2' /* ما هو دورك في هذه المرحلة؟ */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
@@ -711,12 +786,20 @@ class _FatherWidgetState extends State<FatherWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, -1.0),
+                                alignment: AlignmentDirectional(-1.0, -1.0),
                                 child: Text(
                                   valueOrDefault<String>(
-                                    containerWeeklyFatherGuidanceRow
-                                        ?.guidanceDetail
-                                        ?.toString(),
+                                    FFLocalizations.of(context).languageCode ==
+                                            'ar'
+                                        ? valueOrDefault<String>(
+                                            containerWeeklyFatherGuidanceRow
+                                                ?.guidanceDetail
+                                                ?.toString(),
+                                            '-',
+                                          )
+                                        : containerWeeklyFatherGuidanceRow
+                                            ?.guidanceDetailEn
+                                            ?.toString(),
                                     '-',
                                   ),
                                   textAlign: TextAlign.center,
@@ -761,9 +844,11 @@ class _FatherWidgetState extends State<FatherWidget> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(1.0, -1.0),
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Text(
-                                    'المراجع التعليمية لهذا الاسبوع',
+                                    FFLocalizations.of(context).getText(
+                                      '7ouzdhq7' /* المراجع التعليمية لهذا الاسبوع */,
+                                    ),
                                     style: FlutterFlowTheme.of(context)
                                         .titleMedium
                                         .override(
@@ -775,42 +860,6 @@ class _FatherWidgetState extends State<FatherWidget> {
                                         ),
                                   ),
                                 ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Expanded(
-                                      child: Text(
-                                        'كيفية التغلب على غثيان الصباح',
-                                        textAlign: TextAlign.end,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.inter(
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontWeight,
-                                              fontStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
-                                            ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
                                 Divider(
                                   height: 1.0,
                                   thickness: 1.0,
@@ -820,6 +869,89 @@ class _FatherWidgetState extends State<FatherWidget> {
                                   height: 1.0,
                                   thickness: 1.0,
                                   color: Color(0xFFEEEEEE),
+                                ),
+                                FutureBuilder<List<PregnancyfatherVideosRow>>(
+                                  future:
+                                      PregnancyfatherVideosTable().queryRows(
+                                    queryFn: (q) => q,
+                                  ),
+                                  builder: (context, snapshot) {
+                                    // Customize what your widget looks like when it's loading.
+                                    if (!snapshot.hasData) {
+                                      return Center(
+                                        child: SizedBox(
+                                          width: 50.0,
+                                          height: 50.0,
+                                          child: SpinKitRipple(
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                            size: 50.0,
+                                          ),
+                                        ),
+                                      );
+                                    }
+                                    List<PregnancyfatherVideosRow>
+                                        listViewPregnancyfatherVideosRowList =
+                                        snapshot.data!;
+
+                                    return ListView.separated(
+                                      padding: EdgeInsets.zero,
+                                      shrinkWrap: true,
+                                      scrollDirection: Axis.vertical,
+                                      itemCount:
+                                          listViewPregnancyfatherVideosRowList
+                                              .length,
+                                      separatorBuilder: (_, __) =>
+                                          SizedBox(height: 10.0),
+                                      itemBuilder: (context, listViewIndex) {
+                                        final listViewPregnancyfatherVideosRow =
+                                            listViewPregnancyfatherVideosRowList[
+                                                listViewIndex];
+                                        return InkWell(
+                                          splashColor: Colors.transparent,
+                                          focusColor: Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          highlightColor: Colors.transparent,
+                                          onTap: () async {
+                                            await launchURL(
+                                                listViewPregnancyfatherVideosRow
+                                                    .url);
+                                          },
+                                          child: Text(
+                                            listViewPregnancyfatherVideosRow
+                                                .title,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  font: GoogleFonts.inter(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
+                                                  letterSpacing: 0.0,
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
+                                                ),
+                                          ),
+                                        );
+                                      },
+                                    );
+                                  },
                                 ),
                               ].divide(SizedBox(height: 12.0)),
                             ),
