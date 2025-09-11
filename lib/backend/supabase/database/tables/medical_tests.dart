@@ -17,8 +17,8 @@ class MedicalTestsRow extends SupabaseDataRow {
   String get id => getField<String>('id')!;
   set id(String value) => setField<String>('id', value);
 
-  String get pregnancyId => getField<String>('pregnancy_id')!;
-  set pregnancyId(String value) => setField<String>('pregnancy_id', value);
+  String get userId => getField<String>('user_id')!;
+  set userId(String value) => setField<String>('user_id', value);
 
   String get testType => getField<String>('test_type')!;
   set testType(String value) => setField<String>('test_type', value);
@@ -26,9 +26,12 @@ class MedicalTestsRow extends SupabaseDataRow {
   DateTime get testDate => getField<DateTime>('test_date')!;
   set testDate(DateTime value) => setField<DateTime>('test_date', value);
 
-  dynamic? get botResult => getField<dynamic>('bot_result');
-  set botResult(dynamic? value) => setField<dynamic>('bot_result', value);
+  String? get botResult => getField<String>('bot_result');
+  set botResult(String? value) => setField<String>('bot_result', value);
 
   DateTime get createdAt => getField<DateTime>('created_at')!;
   set createdAt(DateTime value) => setField<DateTime>('created_at', value);
+
+  String? get media => getField<String>('media');
+  set media(String? value) => setField<String>('media', value);
 }

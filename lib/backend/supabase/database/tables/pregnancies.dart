@@ -28,4 +28,7 @@ class PregnanciesRow extends SupabaseDataRow {
 
   String? get userId => getField<String>('user_id');
   set userId(String? value) => setField<String>('user_id', value);
+
+  int? get weekno => getField<int>('weekno');
+  set weekno(int? value) => setField<int>('weekno', value);
 }

@@ -17,8 +17,8 @@ class ChildrenRow extends SupabaseDataRow {
   String get id => getField<String>('id')!;
   set id(String value) => setField<String>('id', value);
 
-  String get motherId => getField<String>('mother_id')!;
-  set motherId(String value) => setField<String>('mother_id', value);
+  String? get motherId => getField<String>('mother_id');
+  set motherId(String? value) => setField<String>('mother_id', value);
 
   String? get fullName => getField<String>('full_name');
   set fullName(String? value) => setField<String>('full_name', value);
@@ -31,4 +31,13 @@ class ChildrenRow extends SupabaseDataRow {
 
   DateTime get createdAt => getField<DateTime>('created_at')!;
   set createdAt(DateTime value) => setField<DateTime>('created_at', value);
+
+  String? get height => getField<String>('height');
+  set height(String? value) => setField<String>('height', value);
+
+  String? get weight => getField<String>('weight');
+  set weight(String? value) => setField<String>('weight', value);
+
+  int? get age => getField<int>('age');
+  set age(int? value) => setField<int>('age', value);
 }

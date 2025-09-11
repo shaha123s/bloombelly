@@ -31,4 +31,7 @@ class FetalMovesRow extends SupabaseDataRow {
 
   PostgresTime? get time => getField<PostgresTime>('time');
   set time(PostgresTime? value) => setField<PostgresTime>('time', value);
+
+  String? get result => getField<String>('result');
+  set result(String? value) => setField<String>('result', value);
 }

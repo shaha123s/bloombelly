@@ -28,4 +28,10 @@ class CareGuidesRow extends SupabaseDataRow {
 
   String? get firstAid => getField<String>('first_aid');
   set firstAid(String? value) => setField<String>('first_aid', value);
+
+  int? get startWeek => getField<int>('start_week');
+  set startWeek(int? value) => setField<int>('start_week', value);
+
+  int? get endWeek => getField<int>('end_week');
+  set endWeek(int? value) => setField<int>('end_week', value);
 }

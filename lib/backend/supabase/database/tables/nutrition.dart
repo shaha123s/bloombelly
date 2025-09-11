@@ -37,4 +37,34 @@ class NutritionRow extends SupabaseDataRow {
 
   DateTime get createdAt => getField<DateTime>('created_at')!;
   set createdAt(DateTime value) => setField<DateTime>('created_at', value);
+
+  String? get foodName => getField<String>('food_name');
+  set foodName(String? value) => setField<String>('food_name', value);
+
+  double? get fatG => getField<double>('fat_g');
+  set fatG(double? value) => setField<double>('fat_g', value);
+
+  double? get sugarG => getField<double>('sugar_g');
+  set sugarG(double? value) => setField<double>('sugar_g', value);
+
+  double? get fiberG => getField<double>('fiber_g');
+  set fiberG(double? value) => setField<double>('fiber_g', value);
+
+  double? get sodiumMg => getField<double>('sodium_mg');
+  set sodiumMg(double? value) => setField<double>('sodium_mg', value);
+
+  double? get folateUg => getField<double>('folate_ug');
+  set folateUg(double? value) => setField<double>('folate_ug', value);
+
+  double? get calciumMg => getField<double>('calcium_mg');
+  set calciumMg(double? value) => setField<double>('calcium_mg', value);
+
+  double? get caffeineMg => getField<double>('caffeine_mg');
+  set caffeineMg(double? value) => setField<double>('caffeine_mg', value);
+
+  double? get alcoholG => getField<double>('alcohol_g');
+  set alcoholG(double? value) => setField<double>('alcohol_g', value);
+
+  double? get carbG => getField<double>('carb_g');
+  set carbG(double? value) => setField<double>('carb_g', value);
 }
