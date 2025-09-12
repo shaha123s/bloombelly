@@ -33,8 +33,20 @@ class WeeklyFatherGuidanceRow extends SupabaseDataRow {
   set guidanceDetail(dynamic value) =>
       setField<dynamic>('guidance_detail', value);
 
-  dynamic get educationalResources =>
-      getField<dynamic>('educational_resources')!;
-  set educationalResources(dynamic value) =>
-      setField<dynamic>('educational_resources', value);
+  String? get bodyChangesEn => getField<String>('body_changes_en');
+  set bodyChangesEn(String? value) =>
+      setField<String>('body_changes_en', value);
+
+  String? get psychChangesEn => getField<String>('psych_changes_en');
+  set psychChangesEn(String? value) =>
+      setField<String>('psych_changes_en', value);
+
+  String? get developmentDescriptionEn =>
+      getField<String>('development_description_en');
+  set developmentDescriptionEn(String? value) =>
+      setField<String>('development_description_en', value);
+
+  dynamic? get guidanceDetailEn => getField<dynamic>('guidance_detail_en');
+  set guidanceDetailEn(dynamic? value) =>
+      setField<dynamic>('guidance_detail_en', value);
 }

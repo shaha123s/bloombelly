@@ -60,4 +60,42 @@ class WeeklyTemplatesRow extends SupabaseDataRow {
       getField<dynamic>('education_pregnant_with_child');
   set educationPregnantWithChild(dynamic? value) =>
       setField<dynamic>('education_pregnant_with_child', value);
+
+  String? get sizeMedia => getField<String>('size_media');
+  set sizeMedia(String? value) => setField<String>('size_media', value);
+
+  String? get nameSize => getField<String>('name_size');
+  set nameSize(String? value) => setField<String>('name_size', value);
+
+  String? get text => getField<String>('text');
+  set text(String? value) => setField<String>('text', value);
+
+  String? get bodyChangesEn => getField<String>('body_changes_en');
+  set bodyChangesEn(String? value) =>
+      setField<String>('body_changes_en', value);
+
+  String? get psychChangesEn => getField<String>('psych_changes_en');
+  set psychChangesEn(String? value) =>
+      setField<String>('psych_changes_en', value);
+
+  String? get developmentDescriptionEn =>
+      getField<String>('development_description_en');
+  set developmentDescriptionEn(String? value) =>
+      setField<String>('development_description_en', value);
+
+  String? get tipsFtmEn => getField<String>('tips_ftm_en');
+  set tipsFtmEn(String? value) => setField<String>('tips_ftm_en', value);
+
+  String? get tipsMwcEn => getField<String>('tips_mwc_en');
+  set tipsMwcEn(String? value) => setField<String>('tips_mwc_en', value);
+
+  String? get writingPromptEn => getField<String>('writing_prompt_en');
+  set writingPromptEn(String? value) =>
+      setField<String>('writing_prompt_en', value);
+
+  String? get nameSizeEn => getField<String>('name_size_en');
+  set nameSizeEn(String? value) => setField<String>('name_size_en', value);
+
+  String? get textEn => getField<String>('text_en');
+  set textEn(String? value) => setField<String>('text_en', value);
 }

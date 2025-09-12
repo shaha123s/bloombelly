@@ -1,6 +1,10 @@
 import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
+<<<<<<< HEAD
+=======
+import '/flutter_flow/flutter_flow_icon_button.dart';
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -39,9 +43,12 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
       length: 2,
       initialIndex: 0,
     )..addListener(() => safeSetState(() {}));
+<<<<<<< HEAD
 
     _model.textController ??= TextEditingController();
     _model.textFieldFocusNode ??= FocusNode();
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
   }
 
   @override
@@ -53,8 +60,11 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     context.watch<FFAppState>();
 
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -85,6 +95,7 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+<<<<<<< HEAD
                       Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
@@ -103,30 +114,60 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                           ),
                         ),
                       ),
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                       Align(
                         alignment: AlignmentDirectional(0.0, 0.0),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
+<<<<<<< HEAD
                               80.0, 0.0, 0.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'd1sycbzq' /* Appointment list */,
+=======
+                              0.0, 0.0, 30.0, 0.0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'd1sycbzq' /* لائحة المهام */,
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .override(
+<<<<<<< HEAD
                                   fontFamily: 'play',
                                   fontSize: 25.0,
+=======
+                                  fontFamily: 'gulzar',
+                                  fontSize: 28.0,
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.normal,
                                 ),
                           ),
                         ),
                       ),
+<<<<<<< HEAD
                     ],
                   ),
                   Container(
                     height: 606.59,
+=======
+                      Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                        child: Icon(
+                          Icons.arrow_forward,
+                          color: FlutterFlowTheme.of(context).primaryText,
+                          size: 24.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    height: 200.0,
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                     child: Column(
                       children: [
                         Align(
@@ -184,7 +225,11 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                               ),
                               Tab(
                                 text: FFLocalizations.of(context).getText(
+<<<<<<< HEAD
                                   '15howkue' /* المواعيد */,
+=======
+                                  '15howkue' /* المهام */,
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                 ),
                               ),
                             ],
@@ -198,6 +243,7 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                           child: TabBarView(
                             controller: _model.tabBarController,
                             children: [
+<<<<<<< HEAD
                               SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -324,6 +370,22 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                             'week_no',
                                             _model.week,
                                           ),
+=======
+                              Column(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Align(
+                                    alignment: AlignmentDirectional(1.0, -1.0),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          20.0, 20.0, 0.0, 20.0),
+                                      child: FutureBuilder<
+                                          List<WeeklyTemplatesRow>>(
+                                        future:
+                                            WeeklyTemplatesTable().queryRows(
+                                          queryFn: (q) => q.order('week_no',
+                                              ascending: true),
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                         ),
                                         builder: (context, snapshot) {
                                           // Customize what your widget looks like when it's loading.
@@ -341,6 +403,7 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                               ),
                                             );
                                           }
+<<<<<<< HEAD
                                           List<SuggestionsRow>
                                               listViewSuggestionsRowList =
                                               snapshot.data!;
@@ -461,10 +524,95 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                                 ),
                                               );
                                             },
+=======
+                                          List<WeeklyTemplatesRow>
+                                              dropDownWeeklyTemplatesRowList =
+                                              snapshot.data!;
+
+                                          return FlutterFlowDropDown<String>(
+                                            controller: _model
+                                                    .dropDownValueController ??=
+                                                FormFieldController<String>(
+                                              _model.dropDownValue ??=
+                                                  _model.selectedWeek != null
+                                                      ? (_model.selectedWeek!
+                                                          .toString())
+                                                      : '',
+                                            ),
+                                            options:
+                                                dropDownWeeklyTemplatesRowList
+                                                    .map((e) =>
+                                                        e.weekNo.toString())
+                                                    .toList(),
+                                            onChanged: (val) async {
+                                              safeSetState(() =>
+                                                  _model.dropDownValue = val);
+                                              _model.selectedWeek = int.parse(
+                                                  (_model.dropDownValue!));
+                                              safeSetState(() {});
+                                            },
+                                            width: 200.0,
+                                            height: 40.0,
+                                            textStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      font: GoogleFonts.inter(
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .fontStyle,
+                                                    ),
+                                            hintText:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              '6dz90dxg' /* Select... */,
+                                            ),
+                                            icon: Icon(
+                                              Icons.keyboard_arrow_down_rounded,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
+                                              size: 24.0,
+                                            ),
+                                            fillColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .secondaryBackground,
+                                            elevation: 2.0,
+                                            borderColor: Colors.transparent,
+                                            borderWidth: 0.0,
+                                            borderRadius: 8.0,
+                                            margin:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    12.0, 0.0, 12.0, 0.0),
+                                            hidesUnderline: true,
+                                            isOverButton: false,
+                                            isSearchable: false,
+                                            isMultiSelect: false,
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                           );
                                         },
                                       ),
                                     ),
+<<<<<<< HEAD
                                   ],
                                 ),
                               ),
@@ -768,10 +916,17 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                         ),
                                       ),
                                     ),
+=======
+                                  ),
+                                  if (_model.selectedWeek != null
+                                      ? true
+                                      : false)
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 16.0, 0.0),
                                       child: FutureBuilder<
+<<<<<<< HEAD
                                           List<UserAppointmentsRow>>(
                                         future:
                                             UserAppointmentsTable().queryRows(
@@ -779,6 +934,20 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                             'user_id',
                                             currentUserUid,
                                           ),
+=======
+                                          List<TodoSuggestionsRow>>(
+                                        future:
+                                            TodoSuggestionsTable().queryRows(
+                                          queryFn: (q) => q
+                                              .eqOrNull(
+                                                'is_active',
+                                                true,
+                                              )
+                                              .eqOrNull(
+                                                'week_no',
+                                                _model.selectedWeek,
+                                              ),
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                         ),
                                         builder: (context, snapshot) {
                                           // Customize what your widget looks like when it's loading.
@@ -796,8 +965,13 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                               ),
                                             );
                                           }
+<<<<<<< HEAD
                                           List<UserAppointmentsRow>
                                               listViewUserAppointmentsRowList =
+=======
+                                          List<TodoSuggestionsRow>
+                                              listViewTodoSuggestionsRowList =
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                               snapshot.data!;
 
                                           return ListView.separated(
@@ -806,14 +980,23 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                             shrinkWrap: true,
                                             scrollDirection: Axis.vertical,
                                             itemCount:
+<<<<<<< HEAD
                                                 listViewUserAppointmentsRowList
+=======
+                                                listViewTodoSuggestionsRowList
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                                     .length,
                                             separatorBuilder: (_, __) =>
                                                 SizedBox(height: 16.0),
                                             itemBuilder:
                                                 (context, listViewIndex) {
+<<<<<<< HEAD
                                               final listViewUserAppointmentsRow =
                                                   listViewUserAppointmentsRowList[
+=======
+                                              final listViewTodoSuggestionsRow =
+                                                  listViewTodoSuggestionsRowList[
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                                       listViewIndex];
                                               return Material(
                                                 color: Colors.transparent,
@@ -851,12 +1034,181 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                                               .spaceBetween,
                                                       children: [
                                                         Text(
+<<<<<<< HEAD
                                                           valueOrDefault<
                                                               String>(
                                                             listViewUserAppointmentsRow
                                                                 .title,
                                                             'tt',
                                                           ),
+=======
+                                                          listViewTodoSuggestionsRow
+                                                              .title,
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyLarge
+                                                              .override(
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .inter(
+                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyLarge
+                                                                      .fontWeight,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyLarge
+                                                                      .fontStyle,
+                                                                ),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyLarge
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyLarge
+                                                                    .fontStyle,
+                                                              ),
+                                                        ),
+                                                        FlutterFlowIconButton(
+                                                          borderRadius: 8.0,
+                                                          buttonSize: 40.0,
+                                                          icon: Icon(
+                                                            Icons.add_circle,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .info,
+                                                            size: 24.0,
+                                                          ),
+                                                          onPressed: () async {
+                                                            await UserTasksTable()
+                                                                .insert({
+                                                              'user_id':
+                                                                  currentUserUid,
+                                                              'week_no':
+                                                                  listViewTodoSuggestionsRow
+                                                                      .weekNo,
+                                                              'title':
+                                                                  listViewTodoSuggestionsRow
+                                                                      .title,
+                                                              'suggestion_id':
+                                                                  listViewTodoSuggestionsRow
+                                                                      .id,
+                                                              'is_done': false,
+                                                            });
+                                                          },
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              );
+                                            },
+                                          );
+                                        },
+                                      ),
+                                    ),
+                                ],
+                              ),
+                              Column(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  if (_model.selectedWeek != null
+                                      ? true
+                                      : false)
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          16.0, 0.0, 16.0, 0.0),
+                                      child: FutureBuilder<List<UserTasksRow>>(
+                                        future: UserTasksTable().queryRows(
+                                          queryFn: (q) => q
+                                              .eqOrNull(
+                                                'user_id',
+                                                currentUserUid,
+                                              )
+                                              .eqOrNull(
+                                                'week_no',
+                                                _model.selectedWeek,
+                                              ),
+                                        ),
+                                        builder: (context, snapshot) {
+                                          // Customize what your widget looks like when it's loading.
+                                          if (!snapshot.hasData) {
+                                            return Center(
+                                              child: SizedBox(
+                                                width: 50.0,
+                                                height: 50.0,
+                                                child: SpinKitRipple(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                  size: 50.0,
+                                                ),
+                                              ),
+                                            );
+                                          }
+                                          List<UserTasksRow>
+                                              listViewUserTasksRowList =
+                                              snapshot.data!;
+
+                                          return ListView.separated(
+                                            padding: EdgeInsets.zero,
+                                            primary: false,
+                                            shrinkWrap: true,
+                                            scrollDirection: Axis.vertical,
+                                            itemCount:
+                                                listViewUserTasksRowList.length,
+                                            separatorBuilder: (_, __) =>
+                                                SizedBox(height: 16.0),
+                                            itemBuilder:
+                                                (context, listViewIndex) {
+                                              final listViewUserTasksRow =
+                                                  listViewUserTasksRowList[
+                                                      listViewIndex];
+                                              return Material(
+                                                color: Colors.transparent,
+                                                elevation: 2.0,
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          12.0),
+                                                ),
+                                                child: Container(
+                                                  width:
+                                                      MediaQuery.sizeOf(context)
+                                                              .width *
+                                                          0.9,
+                                                  height: 70.0,
+                                                  decoration: BoxDecoration(
+                                                    color: Color(0xFFD0CADC),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            12.0),
+                                                  ),
+                                                  child: Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                16.0,
+                                                                16.0,
+                                                                16.0,
+                                                                16.0),
+                                                    child: Row(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceBetween,
+                                                      children: [
+                                                        Text(
+                                                          listViewUserTasksRow
+                                                              .title,
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyLarge
@@ -916,14 +1268,42 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                                               ),
                                                               child: Checkbox(
                                                                 value: _model
+<<<<<<< HEAD
                                                                         .checkboxValueMap[
                                                                     listViewUserAppointmentsRow] ??= true,
+=======
+                                                                            .checkboxValueMap[
+                                                                        listViewUserTasksRow] ??=
+                                                                    listViewUserTasksRow
+                                                                        .isDone,
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                                                 onChanged:
                                                                     (newValue) async {
                                                                   safeSetState(() =>
                                                                       _model.checkboxValueMap[
+<<<<<<< HEAD
                                                                               listViewUserAppointmentsRow] =
                                                                           newValue!);
+=======
+                                                                              listViewUserTasksRow] =
+                                                                          newValue!);
+                                                                  if (newValue!) {
+                                                                    await UserTasksTable()
+                                                                        .update(
+                                                                      data: {
+                                                                        'is_done':
+                                                                            _model.checkboxValueMap[listViewUserTasksRow],
+                                                                      },
+                                                                      matchingRows:
+                                                                          (rows) =>
+                                                                              rows.eqOrNull(
+                                                                        'id',
+                                                                        listViewUserTasksRow
+                                                                            .id,
+                                                                      ),
+                                                                    );
+                                                                  }
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                                                 },
                                                                 side: (FlutterFlowTheme.of(context)
                                                                             .alternate !=
@@ -955,8 +1335,12 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                         },
                                       ),
                                     ),
+<<<<<<< HEAD
                                   ],
                                 ),
+=======
+                                ],
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                               ),
                             ],
                           ),

@@ -1,6 +1,10 @@
 import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
+<<<<<<< HEAD
+=======
+import '/flutter_flow/flutter_flow_icon_button.dart';
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -15,7 +19,11 @@ import 'package:provider/provider.dart';
 class ToDo1CopyModel extends FlutterFlowModel<ToDo1CopyWidget> {
   ///  Local state fields for this page.
 
+<<<<<<< HEAD
   int? week;
+=======
+  int? selectedWeek;
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
 
   ///  State fields for stateful widgets in this page.
 
@@ -29,6 +37,7 @@ class ToDo1CopyModel extends FlutterFlowModel<ToDo1CopyWidget> {
   // State field(s) for DropDown widget.
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
+<<<<<<< HEAD
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
@@ -36,6 +45,11 @@ class ToDo1CopyModel extends FlutterFlowModel<ToDo1CopyWidget> {
   // State field(s) for Checkbox widget.
   Map<UserAppointmentsRow, bool> checkboxValueMap = {};
   List<UserAppointmentsRow> get checkboxCheckedItems =>
+=======
+  // State field(s) for Checkbox widget.
+  Map<UserTasksRow, bool> checkboxValueMap = {};
+  List<UserTasksRow> get checkboxCheckedItems =>
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
       checkboxValueMap.entries.where((e) => e.value).map((e) => e.key).toList();
 
   @override
@@ -44,7 +58,10 @@ class ToDo1CopyModel extends FlutterFlowModel<ToDo1CopyWidget> {
   @override
   void dispose() {
     tabBarController?.dispose();
+<<<<<<< HEAD
     textFieldFocusNode?.dispose();
     textController?.dispose();
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
   }
 }
