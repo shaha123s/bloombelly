@@ -2,6 +2,10 @@ import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import '/flutter_flow/flutter_flow_icon_button.dart';
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
 =======
 import '/flutter_flow/flutter_flow_icon_button.dart';
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
@@ -44,9 +48,12 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
       initialIndex: 0,
     )..addListener(() => safeSetState(() {}));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     _model.textController ??= TextEditingController();
     _model.textFieldFocusNode ??= FocusNode();
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
 =======
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
   }
@@ -61,8 +68,11 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
   @override
   Widget build(BuildContext context) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     context.watch<FFAppState>();
 
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
 =======
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
     return GestureDetector(
@@ -96,6 +106,7 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
 <<<<<<< HEAD
+<<<<<<< HEAD
                       Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
@@ -116,28 +127,41 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                       ),
 =======
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                       Align(
                         alignment: AlignmentDirectional(0.0, 0.0),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
+<<<<<<< HEAD
 <<<<<<< HEAD
                               80.0, 0.0, 0.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'd1sycbzq' /* Appointment list */,
 =======
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                               0.0, 0.0, 30.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'd1sycbzq' /* لائحة المهام */,
+<<<<<<< HEAD
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
+=======
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                             ),
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .override(
 <<<<<<< HEAD
+<<<<<<< HEAD
                                   fontFamily: 'play',
                                   fontSize: 25.0,
+=======
+                                  fontFamily: 'gulzar',
+                                  fontSize: 28.0,
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
 =======
                                   fontFamily: 'gulzar',
                                   fontSize: 28.0,
@@ -149,11 +173,14 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                         ),
                       ),
 <<<<<<< HEAD
+<<<<<<< HEAD
                     ],
                   ),
                   Container(
                     height: 606.59,
 =======
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                       Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
@@ -167,6 +194,9 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                   ),
                   Container(
                     height: 200.0,
+<<<<<<< HEAD
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
+=======
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                     child: Column(
                       children: [
@@ -226,7 +256,11 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                               Tab(
                                 text: FFLocalizations.of(context).getText(
 <<<<<<< HEAD
+<<<<<<< HEAD
                                   '15howkue' /* المواعيد */,
+=======
+                                  '15howkue' /* المهام */,
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
 =======
                                   '15howkue' /* المهام */,
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
@@ -243,6 +277,7 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                           child: TabBarView(
                             controller: _model.tabBarController,
                             children: [
+<<<<<<< HEAD
 <<<<<<< HEAD
                               SingleChildScrollView(
                                 child: Column(
@@ -371,6 +406,8 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                             _model.week,
                                           ),
 =======
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                               Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -385,6 +422,9 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                             WeeklyTemplatesTable().queryRows(
                                           queryFn: (q) => q.order('week_no',
                                               ascending: true),
+<<<<<<< HEAD
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
+=======
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                         ),
                                         builder: (context, snapshot) {
@@ -403,6 +443,7 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                               ),
                                             );
                                           }
+<<<<<<< HEAD
 <<<<<<< HEAD
                                           List<SuggestionsRow>
                                               listViewSuggestionsRowList =
@@ -525,6 +566,8 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                               );
                                             },
 =======
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                           List<WeeklyTemplatesRow>
                                               dropDownWeeklyTemplatesRowList =
                                               snapshot.data!;
@@ -607,11 +650,15 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                             isOverButton: false,
                                             isSearchable: false,
                                             isMultiSelect: false,
+<<<<<<< HEAD
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
+=======
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                           );
                                         },
                                       ),
                                     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
                                   ],
                                 ),
@@ -917,15 +964,21 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                       ),
                                     ),
 =======
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                   ),
                                   if (_model.selectedWeek != null
                                       ? true
                                       : false)
+<<<<<<< HEAD
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
+=======
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 16.0, 0.0),
                                       child: FutureBuilder<
+<<<<<<< HEAD
 <<<<<<< HEAD
                                           List<UserAppointmentsRow>>(
                                         future:
@@ -935,6 +988,8 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                             currentUserUid,
                                           ),
 =======
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                           List<TodoSuggestionsRow>>(
                                         future:
                                             TodoSuggestionsTable().queryRows(
@@ -947,6 +1002,9 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                                 'week_no',
                                                 _model.selectedWeek,
                                               ),
+<<<<<<< HEAD
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
+=======
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                         ),
                                         builder: (context, snapshot) {
@@ -966,8 +1024,13 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                             );
                                           }
 <<<<<<< HEAD
+<<<<<<< HEAD
                                           List<UserAppointmentsRow>
                                               listViewUserAppointmentsRowList =
+=======
+                                          List<TodoSuggestionsRow>
+                                              listViewTodoSuggestionsRowList =
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
 =======
                                           List<TodoSuggestionsRow>
                                               listViewTodoSuggestionsRowList =
@@ -981,7 +1044,11 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                             scrollDirection: Axis.vertical,
                                             itemCount:
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                 listViewUserAppointmentsRowList
+=======
+                                                listViewTodoSuggestionsRowList
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
 =======
                                                 listViewTodoSuggestionsRowList
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
@@ -991,8 +1058,13 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                             itemBuilder:
                                                 (context, listViewIndex) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                                               final listViewUserAppointmentsRow =
                                                   listViewUserAppointmentsRowList[
+=======
+                                              final listViewTodoSuggestionsRow =
+                                                  listViewTodoSuggestionsRowList[
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
 =======
                                               final listViewTodoSuggestionsRow =
                                                   listViewTodoSuggestionsRowList[
@@ -1035,6 +1107,7 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                                       children: [
                                                         Text(
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                           valueOrDefault<
                                                               String>(
                                                             listViewUserAppointmentsRow
@@ -1042,6 +1115,8 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                                             'tt',
                                                           ),
 =======
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                                           listViewTodoSuggestionsRow
                                                               .title,
                                                           style: FlutterFlowTheme
@@ -1208,6 +1283,9 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                                         Text(
                                                           listViewUserTasksRow
                                                               .title,
+<<<<<<< HEAD
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
+=======
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1269,22 +1347,31 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                                               child: Checkbox(
                                                                 value: _model
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                                         .checkboxValueMap[
                                                                     listViewUserAppointmentsRow] ??= true,
 =======
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                                                             .checkboxValueMap[
                                                                         listViewUserTasksRow] ??=
                                                                     listViewUserTasksRow
                                                                         .isDone,
+<<<<<<< HEAD
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
+=======
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                                                 onChanged:
                                                                     (newValue) async {
                                                                   safeSetState(() =>
                                                                       _model.checkboxValueMap[
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                                               listViewUserAppointmentsRow] =
                                                                           newValue!);
 =======
+=======
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                                                               listViewUserTasksRow] =
                                                                           newValue!);
                                                                   if (newValue!) {
@@ -1303,6 +1390,9 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                                                       ),
                                                                     );
                                                                   }
+<<<<<<< HEAD
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
+=======
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
                                                                 },
                                                                 side: (FlutterFlowTheme.of(context)
@@ -1336,8 +1426,12 @@ class _ToDo1CopyWidgetState extends State<ToDo1CopyWidget>
                                       ),
                                     ),
 <<<<<<< HEAD
+<<<<<<< HEAD
                                   ],
                                 ),
+=======
+                                ],
+>>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
 =======
                                 ],
 >>>>>>> 3ac7f09744bdf29c8737727cc4f8d276147c8253
